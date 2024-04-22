@@ -45,7 +45,7 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-        <button type="button" className="-m-2.5 p-2.5 text-gray-700 lg:hidden" onClick={() => setShowMenu(true)}>
+        <button type="button" className="-m-2.5 p-2.5 text-white lg:hidden" onClick={() => setShowMenu(true)}>
          <span className="sr-only">Open sidebar</span>
          <BiMenu className="h-6 w-6" aria-hidden="true" />
       </button>
