@@ -140,8 +140,6 @@ function Navbar() {
         </Transition.Root>
     </nav>
 
-    
-    
    </header>
   );
 }
