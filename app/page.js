@@ -1,4 +1,5 @@
-import Banner from "@/components/Banner";
+
+import Banner from "@/components/Banner/Banner";
 import Image from "next/image";
 
 
