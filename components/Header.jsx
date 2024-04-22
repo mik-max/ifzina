@@ -1,44 +1,57 @@
-<<<<<<< HEAD
-# ifzina
-Engineering website
-=======
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+"use client"
+import Image from 'next/image';
+import Link from 'next/link';
+import { Fragment, useState } from 'react'
+import { BiMenu, BiClose } from 'react-icons/bi'
+import { Dialog, Menu, Transition } from '@headlessui/react'
 
-## Getting Started
+function Navbar() {
+   const [showMenu, setShowMenu] = useState(false);
 
-First, run the development server:
+  return (
+   <header className='w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300'>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-  <Transition.Root show={showMenu} as={Fragment}>
+    <nav className="flex justify-between items-center p-4">
+      
+      <Link href="/">
+        <Image src="/images/logo.png" alt="Logo" className="w-48 h-8" width={50} height={50} />
+      </Link>
+      <div className="" >
+        {/* <BiMenu className="fa text-white text-lg" onClick={() => setShowMenu(showMenu)}/> */}
+        <ul className=" nav-links md:flex justify-end hidden"  style={{ right: showMenu ? 0 : -200 }}>
+          <li className="mr-6" >
+            <Link href="/">
+              <p className="text-white hover:text-gray-200">HOME</p>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/about">
+              <p className="text-white hover:text-gray-200">ABOUT</p>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/course">
+              <p className="text-white hover:text-gray-200">COURSE</p>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/blog">
+              <p className="text-white hover:text-gray-200">BLOG</p>
+            </Link>
+          </li>
+          <li className="mr-6">
+            <Link href="/contact">
+              <p className="text-white hover:text-gray-200">CONTACT</p>
+            </Link>
+          </li>
+        </ul>
+        <button type="button" className="-m-2.5 p-2.5 text-white lg:hidden" onClick={() => setShowMenu(true)}>
+         <span className="sr-only">Open sidebar</span>
+         <BiMenu className="h-6 w-6" aria-hidden="true" />
+      </button>
+      </div>
+     
+      <Transition.Root show={showMenu} as={Fragment}>
           <Dialog as="div" className="relative z-50 lg:hidden" onClose={setShowMenu}>
             <Transition.Child
               as={Fragment}
@@ -125,4 +138,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
             </div>
           </Dialog>
         </Transition.Root>
->>>>>>> master
+    </nav>
+
+    
+    
+   </header>
+  );
+}
+
+export default Navbar;
