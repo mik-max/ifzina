@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 import React from 'react';
 import Banner from '@/components/Banner/Banner';
@@ -14,7 +15,7 @@ const AboutPage = () => {
 
       <main className='flex flex-col md:gap-10 gap-5 mt-5'>
          
-      <section className='flex flex-col-reverse md:flex-row w-full justify-between md:gap-24 gap-5 md:px-[100px] px-[25px] py-[25px] md:py-[50px]'  >
+      <section className='flex flex-col-reverse md:flex-row w-full justify-between md:gap-24 gap-5 md:px-[100px] px-[25px] py-[25px] md:py-[50px]'>
           <div className='w-[100%] md:w-[50%] pt-5'>
                <h1 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Company Overview</h1>
                <p className='text-[14px] font-[500] text-[#56616B] leading-6'>IFZINA is a dynamic EPC company based in Lagos, Nigeria, specializing in providing comprehensive engineering, procurement, and construction services across various industries.</p>
