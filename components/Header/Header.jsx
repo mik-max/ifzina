@@ -121,7 +121,7 @@ const Header = () => {
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-blue-900 px-6 pb-4">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-[#0073E5] px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
                       <Image
                         alt="logo"
