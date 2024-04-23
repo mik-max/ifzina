@@ -27,6 +27,9 @@ module.exports = {
           dark: "#333333",
         },
       },
+      backgroundImage: {
+          'launch-bg': "url('/images/launch.jpg')",
+     }
     },
   },
   plugins: [],
