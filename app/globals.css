@@ -12,13 +12,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-} 
+}  */
 
  body {
   color: rgb(var(--foreground-rgb));
@@ -28,7 +28,6 @@
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    border: 1px solid red;
     
 }
 
@@ -47,7 +46,7 @@
 .banner{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("../public/images/bg4.jpg");
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../public/images/bg4.jpg);
   background-position: center;
   background-size: cover;
   /* position: relative; */
@@ -164,7 +163,7 @@ nav .fa{
 .sub-header{
   height: 50vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url("../public/images/bg1.jpg");
+  background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(../public/images/bg1.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
