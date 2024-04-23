@@ -1,10 +1,26 @@
-import React from 'react'
-import styles from './about.module.css'
 
-const About = () => {
+import React from 'react';
+import Banner from '@/components/Banner/Banner';
+import CompanyOverview from '../../components/CompanyOverview/CompanyOverview';
+import MissionAndValues from '../../components/MissionAndValues/MissionAndValues';
+import TeamMembers from '../../components/TeamMembers/TeamMembers';
+import CompanyHistory from '../../components/CompanyHistory/CompanyHistory';
+
+const AboutPage = () => {
   return (
-    <div className={styles.container}>About</div>
-  )
-}
+    <div>
+      <Banner
+        first={
+          <h1 className="text-6xl sm:text-3xl font-semibold text-center my-8">About Us</h1>
+        }
+      />
 
-export default About
+      <CompanyOverview />
+      <MissionAndValues />
+      <TeamMembers />
+      <CompanyHistory />
+    </div>
+  );
+};
+
+export default AboutPage;
