@@ -16,52 +16,62 @@ const Header = () => {
         <Link href="/">
           <Image src="/images/logo.png" alt="Logo" width={200} height={200} />
         </Link>
-        <div className="">
+        <div className="nav-links">
           {/* <BiMenu className="fa text-white text-lg" onClick={() => setShowMenu(showMenu)}/> */}
           <ul
-            className=" nav-links md:flex justify-end hidden"
-            style={{ right: showMenu ? 0 : -200 }}
+            className="  md:flex justify-end hidden"
+            // style={{ right: showMenu ? 0 : -200 }}
           >
             <li className="mr-6">
               <Link href="/">
-                <p className="text-white hover:text-gray-200">HOME</p>
+                <p className="text-white hover:text-gray-200">
+                  HOME
+                </p>
               </Link>
             </li>
             <li className="mr-6">
               <Link href="/about">
-                <p className="text-white hover:text-gray-200">ABOUT</p>
+                <p className="text-white hover:text-gray-200">
+                  ABOUT
+                </p>
               </Link>
             </li>
             <li className="mr-6">
               <Link href="/course">
-                <p className="text-white hover:text-gray-200">COURSE</p>
+                <p className="text-white hover:text-gray-200">
+                  SERVICES
+                </p>
               </Link>
             </li>
             <li className="mr-6">
               <Link href="/blog">
-                <p className="text-white hover:text-gray-200">BLOG</p>
+                <p className="text-white hover:text-gray-200">
+                  INDUSTRIES
+                </p>
               </Link>
             </li>
             <li className="mr-6">
               <Link href="/contact">
-                <p className="text-white hover:text-gray-200">CONTACT</p>
+                <p className="text-white hover:text-gray-200">
+                  CONTACT
+                </p>
               </Link>
             </li>
           </ul>
-          <button
-            type="button"
-            className="-m-2.5 p-2.5 text-white lg:hidden"
-            onClick={() => setShowMenu(true)}
-          >
-            <span className="sr-only">Open sidebar</span>
-            <BiMenu className="h-6 w-6" aria-hidden="true" />
-          </button>
+         
         </div>
-
+        <button
+          type="button"
+          className="-m-2.5 fa p-2.5 text-white "
+          onClick={() => setShowMenu(true)}
+        >
+          <span className="sr-only">Open sidebar</span>
+          <BiMenu className="h-6 w-6" aria-hidden="true" />
+        </button>
         <Transition.Root show={showMenu} as={Fragment}>
           <Dialog
             as="div"
-            className="relative z-50 lg:hidden"
+            className="relative z-50 md:hidden"
             onClose={setShowMenu}
           >
             <Transition.Child
@@ -111,7 +121,7 @@ const Header = () => {
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-blue px-6 pb-4">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-blue-900 px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
                       <Image
                         alt="logo"
@@ -121,44 +131,46 @@ const Header = () => {
                         height={200}
                       />
                     </div>
-                    <nav className="flex flex-1 flex-col">
-                      <ul className="flex flex-1 flex-col gap-y-7 justify-start">
-                        <li className="mr-6">
-                          <Link href="/">
-                            <p className="text-white hover:text-gray-200">
-                              HOME
-                            </p>
-                          </Link>
-                        </li>
-                        <li className="mr-6">
-                          <Link href="/about">
-                            <p className="text-white hover:text-gray-200">
-                              ABOUT
-                            </p>
-                          </Link>
-                        </li>
-                        <li className="mr-6">
-                          <Link href="/course">
-                            <p className="text-white hover:text-gray-200">
-                              COURSE
-                            </p>
-                          </Link>
-                        </li>
-                        <li className="mr-6">
-                          <Link href="/blog">
-                            <p className="text-white hover:text-gray-200">
-                              BLOG
-                            </p>
-                          </Link>
-                        </li>
-                        <li className="mr-6">
-                          <Link href="/contact">
-                            <p className="text-white hover:text-gray-200">
-                              CONTACT
-                            </p>
-                          </Link>
-                        </li>
-                      </ul>
+                    <nav className="flex shrink-0 items-start flex-col">
+                      <div className='nav-links'>
+                          <ul className="flex shrink-0 flex-col gap-y-7  items-start justify-start">
+                            <li className="mr-6">
+                              <Link href="/">
+                                <p className="text-white hover:text-gray-200">
+                                  HOME
+                                </p>
+                              </Link>
+                            </li>
+                            <li className="mr-6">
+                              <Link href="/about">
+                                <p className="text-white hover:text-gray-200">
+                                  ABOUT
+                                </p>
+                              </Link>
+                            </li>
+                            <li className="mr-6">
+                              <Link href="/course">
+                                <p className="text-white hover:text-gray-200">
+                                  SERVICES
+                                </p>
+                              </Link>
+                            </li>
+                            <li className="mr-6">
+                              <Link href="/blog">
+                                <p className="text-white hover:text-gray-200">
+                                  INDUSTRIES
+                                </p>
+                              </Link>
+                            </li>
+                            <li className="mr-6">
+                              <Link href="/contact">
+                                <p className="text-white hover:text-gray-200">
+                                  CONTACT
+                                </p>
+                              </Link>
+                            </li>
+                          </ul>
+                      </div>
                     </nav>
                   </div>
                 </Dialog.Panel>
