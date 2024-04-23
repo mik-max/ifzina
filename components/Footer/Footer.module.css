@@ -37,10 +37,13 @@
   margin-bottom: 0.5rem;
 }
 
-.linkList a {
+/* .linkList a {
   color: #fff;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  line-height: 24px;
   text-decoration: none;
-}
+} */
 
 .linkList a:hover {
   text-decoration: underline;

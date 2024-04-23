@@ -15,6 +15,9 @@ module.exports = {
         black:{
           300:"#131316"
         },
+        grey:{
+          400: "#56616B"
+        },
         secondary: {
           DEFAULT: "#fefae0",
           text: "#777777",
