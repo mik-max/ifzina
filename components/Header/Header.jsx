@@ -55,19 +55,20 @@ const Header = () => {
               </Link>
             </li>
             <li className="mr-6">
-              <Link href="/course">
+              <Link href="/market">
+                <p className={isScrolled ? "text-black" : "text-white"}>
+                  MARKET
+                </p>
+              </Link>
+            </li>
+            <li className="mr-6">
+              <Link href="/service">
                 <p className={isScrolled ? "text-black" : "text-white"}>
                   SERVICES
                 </p>
               </Link>
             </li>
-            <li className="mr-6">
-              <Link href="/blog">
-                <p className={isScrolled ? "text-black" : "text-white"}>
-                  INDUSTRIES
-                </p>
-              </Link>
-            </li>
+            
             <li className="mr-6">
               <Link href="/contact">
                 <p className={isScrolled ? "text-black" : "text-white"}>
