@@ -11,6 +11,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
+    
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.column}>

@@ -1,7 +1,7 @@
 /* components/Footer.module.css */
 
 .footer {
-  background-color: theme('colors.primary');
+  background-color: #00264D;
   color: #fff;
   padding: 4rem 0;
 }
