@@ -1,10 +1,7 @@
 
 import React from 'react';
 import Banner from '@/components/Banner/Banner';
-import CompanyOverview from '../../components/CompanyOverview/CompanyOverview';
-import MissionAndValues from '../../components/MissionAndValues/MissionAndValues';
-import TeamMembers from '../../components/TeamMembers/TeamMembers';
-import CompanyHistory from '../../components/CompanyHistory/CompanyHistory';
+
 
 const AboutPage = () => {
   return (
