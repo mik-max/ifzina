@@ -8,8 +8,8 @@ export default function Home() {
       <Banner 
         first={
           <>
-            <h1 className="font-semibold">Worlds Biggest University</h1>
-            <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS,<br/> Javascript and you are good to go. </p>
+            <h1 className="font-semibold">Welcome to IFZINA</h1>
+            <p>Your premier Engineering, Procurement, and Construction partner in Nigeria.</p>
             <a href="" class="hero-btn">Visit us to know more</a>
           </>
         }
