@@ -29,6 +29,8 @@ module.exports = {
       },
       backgroundImage: {
           'launch-bg': "url('/images/launch.jpg')",
+          'about-bg': "linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url('/images/bg1.jpg')",
+          'market-bg': "linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url('/images/markets.jpg')",
      }
     },
   },
