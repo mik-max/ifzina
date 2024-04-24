@@ -1,4 +1,5 @@
 "use client"
+import { FadeIn } from "@/components/FadeIn";
 import HomeAbout from "@/components/HomeAbout/HomeAbout";
 import Banner from "@/components/HomeBanner/HomeBanner";
 import HomeMarket from "@/components/HomeMarket/HomeMarket";
@@ -43,18 +44,18 @@ export default function Home() {
         />
       </section>
       
-      <section id="about" className="py-">
+      <FadeIn className="py-">
         <HomeAbout/>
-      </section>
+      </FadeIn>
 
       <section>
         <HomeServices/>
       </section>
-      {/* <section className="flex flex-col lg:mt-20 sm:mt-32 mt- md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]"> */}
+      <FadeIn >
         <HomeMarket/>
-        {/* </section> */}
+        </FadeIn>
 
-      <section className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
+      <FadeIn className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
           <div className='w-[100%]  pt-5'>
                 <h1 className='font-bold text-[#131316] md:text-4xl text-xl  mb-[5px] text-center'>Testimonials</h1>
                 <p className='text-[16px] font-[500] text-[#56616B] leading-6 text-center'>Don{"'"}t just take our word for it. Hear what our clients have to say about working with us</p>
@@ -76,7 +77,7 @@ export default function Home() {
                     </div>
                 </div>
           </div>
-      </section>
+      </FadeIn>
 
       <div>
         {showButton && (
