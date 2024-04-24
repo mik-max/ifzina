@@ -1,10 +1,34 @@
-
+"use client"
 import HomeAbout from "@/components/HomeAbout/HomeAbout";
 import Banner from "@/components/HomeBanner/HomeBanner";
+import HomeMarket from "@/components/HomeMarket/HomeMarket";
 import HomeServices from "@/components/HomeServices/HomeServices";
 import Image from "next/image";
-
+import { useState, useEffect } from "react";
+import { IoArrowUpCircleSharp } from "react-icons/io5";
 export default function Home() {
+
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = function() {
+      scrollFunction();
+    };
+  }, []);
+
+  const scrollFunction = () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  };
+
+  const topFunction = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div>
       <section>
@@ -26,6 +50,9 @@ export default function Home() {
       <section>
         <HomeServices/>
       </section>
+      {/* <section className="flex flex-col lg:mt-20 sm:mt-32 mt- md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]"> */}
+        <HomeMarket/>
+        {/* </section> */}
 
       <section className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
           <div className='w-[100%]  pt-5'>
@@ -50,6 +77,14 @@ export default function Home() {
                 </div>
           </div>
       </section>
+
+      <div>
+        {showButton && (
+          <button onClick={topFunction} id="myBtn" title="Go to top" className={`fixed right-4 bottom-4 animate-bounce w-16 text-[#004080] z-50 h-16 ${showButton ? 'block' : 'hidden'}`}>
+            <IoArrowUpCircleSharp className="w-full h-full" />
+          </button>
+        )}
+      </div>
     </div>
   );
 }
