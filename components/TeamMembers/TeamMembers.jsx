@@ -10,18 +10,11 @@ const TeamMembers = () => {
       <div className={styles.content}>
         <h2 className={styles.heading}>Team Members</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          vehicula purus vel tortor molestie, vitae bibendum dolor pulvinar.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          vehicula purus vel tortor molestie, vitae bibendum dolor pulvinar.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          consequatur corporis debitis accusamus deserunt deleniti quia
-          aspernatur aliquam magnam qui tempora tenetur commodi rem eius
-          officia, iusto maiores. Beatae, doloribus! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Inventore obcaecati aperiam praesentium
-          eveniet enim optio incidunt molestiae, maxime, vitae pariatur
-          excepturi porro sint deserunt velit eum molestias, corporis deleniti
-          nulla?
+          Our team comprises highly skilled engineers, project managers, and
+          technical experts with extensive experience in their respective
+          fields. Led by visionary leaders and seasoned industry professionals,
+          we are committed to delivering high-quality solutions tailored to meet
+          our clients needs.
         </p>
       </div>
       <div className={styles.imageContainer}>
