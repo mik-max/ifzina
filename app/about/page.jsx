@@ -12,6 +12,7 @@ const AboutPage = () => {
         first={
           <h1 className="text-3xl md:text-6xl  font-semibold text-center my-8">About Us</h1>
         }
+        bgImage={'bg-about-bg'}
       />
 
       <main className='flex flex-col md:gap-10 gap-5 mt-5'>
