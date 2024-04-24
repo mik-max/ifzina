@@ -12,13 +12,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-} */
+}  */
 
  body {
   color: rgb(var(--foreground-rgb));
@@ -28,7 +28,6 @@
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    border: 1px solid red;
     
 }
 
@@ -149,21 +148,14 @@ nav .fa{
      z-index: 2;
      transition: 1s;
   }
-  /* nav{
-    display: flex;
-    padding: 0% 0%;
-    justify-content: space-between;
-    align-items: start;
-  } */
+
   nav .fa{
      display: block;
      margin: 10px;
      font-size: 22px;
      cursor: pointer;
   }
-  /* .nav-links ul{
-     padding: 30px;
-  } */
+
 }
 
 
