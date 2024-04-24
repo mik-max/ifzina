@@ -19,10 +19,10 @@ const CompanyHistory = () => {
       <div className={styles.content}>
         <h2 className={styles.heading}>Company History</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          vehicula purus vel tortor molestie, vitae bibendum dolor pulvinar.
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consequatur corporis debitis accusamus deserunt deleniti quia aspernatur aliquam magnam qui tempora tenetur commodi rem eius officia, iusto maiores. Beatae, doloribus!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore obcaecati aperiam praesentium eveniet enim optio incidunt molestiae, maxime, vitae pariatur excepturi porro sint deserunt velit eum molestias, corporis deleniti nulla?
+          Established in 20XX, IFZINA has rapidly emerged as a trusted name in
+          the Nigerian EPC industry. With a proven track record of successful
+          projects and a dedicated team of professionals, we continue to set new
+          standards of excellence in our field.
         </p>
       </div>
     </section>
