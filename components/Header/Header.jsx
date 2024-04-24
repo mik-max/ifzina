@@ -169,38 +169,38 @@ const Header = () => {
                         <ul className="flex shrink-0 flex-col gap-y-7  items-start justify-start">
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/" className='flex gap-2 items-center'>
-                                   <MdHome fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
-                                   <p className={isScrolled ? "text-black" : "text-white"}>HOME</p>
+                                   <MdHome fontSize={'18px'} className='mt-[-1px]' color="white" />
+                                   <p className="text-white">HOME</p>
                               </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/about" className='flex gap-2 items-center'>
-                                   <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
-                                   <p className={isScrolled ? "text-black" : "text-white"}>
+                                   <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color="white" />
+                                   <p className="text-white">
                                    ABOUT
                                    </p>
                               </Link>
                          </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/market" className='flex gap-2 items-center'>
-                                   <GiShop fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
-                                   <p className={isScrolled ? "text-black" : "text-white"}>
+                                   <GiShop fontSize={'18px'} className='mt-[-1px]' color="white" />
+                                   <p className="text-white">
                                    MARKET
                                    </p>
                               </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/service" className='flex gap-2 items-center'>
-                                   <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
-                                   <p className={isScrolled ? "text-black" : "text-white"}>
+                                   <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color="white" />
+                                   <p className="text-white">
                                    SERVICES
                                    </p>
                               </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/contact" className='flex gap-2 items-center'>
-                                        <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
-                                        <p className={isScrolled ? "text-black" : "text-white"}>
+                                        <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color="white" />
+                                        <p className="text-white">
                                         CONTACT
                                         </p>
                               </Link>
