@@ -69,7 +69,7 @@ nav img{
 .nav-links ul li{
   list-style: none;
   display: inline-block;
-  padding: 8px 12px;
+  padding: 8px 6px;
   position: relative;
 }
 .nav-links ul li p{
@@ -79,9 +79,10 @@ nav img{
 }
 .nav-links ul li::after{
   content: '';
+  margin-top: 1px;
   width: 0%;
   height: 2px;
-  background: theme('colors.primary');
+  /* background: theme('colors.black.300'); */
   display: block;
   margin: auto;
   transition: 0.5s;
