@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { Fragment, useState, useEffect } from 'react'
 import { BiMenu  } from 'react-icons/bi'
 import { IoMdClose } from "react-icons/io";
+import { MdHome } from "react-icons/md";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { GiShop } from "react-icons/gi";
+import { MdHomeRepairService } from "react-icons/md";
+import { MdPermContactCalendar } from "react-icons/md";
 
 import { Dialog, Menu, Transition } from '@headlessui/react'
 
@@ -42,38 +47,44 @@ const Header = () => {
             className="  md:flex justify-end hidden"
             // style={{ right: showMenu ? 0 : -200 }}
           >
-            <li className="mr-6 ">
-              <Link href="/">
+            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+               
+              <Link href="/" className='flex gap-2 items-center'>
+               <MdHome fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>HOME</p>
               </Link>
             </li>
-            <li className="mr-6">
-              <Link href="/about">
+            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`} >
+              <Link href="/about" className='flex gap-2 items-center'>
+               <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>
                   ABOUT
                 </p>
               </Link>
             </li>
-            <li className="mr-6">
-              <Link href="/market">
+            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+              <Link href="/market" className='flex gap-2 items-center'>
+              <GiShop fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>
                   MARKET
                 </p>
               </Link>
             </li>
-            <li className="mr-6">
-              <Link href="/service">
+            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+              <Link href="/service" className='flex gap-2 items-center'>
+              <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>
                   SERVICES
                 </p>
               </Link>
             </li>
             
-            <li className="mr-6">
-              <Link href="/contact">
-                <p className={isScrolled ? "text-black" : "text-white"}>
-                  CONTACT
-                </p>
+            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+              <Link href="/contact" className='flex gap-2 items-center'>
+                    <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                    <p className={isScrolled ? "text-black" : "text-white"}>
+                    CONTACT
+                    </p>
               </Link>
             </li>
           </ul>
@@ -143,8 +154,8 @@ const Header = () => {
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 bg-[#004080] overflow-y-auto px-6 pb-4">
-                    <div className="flex h-16 shrink-0 items-center">
+                  <div className="flex grow flex-col gap-y-5 bg-[#00264D] overflow-y-auto pb-4">
+                    <div className="flex h-16 shrink-0 items-center  px-6">
                       <Image
                         alt="logo"
                         className="h-8 w-auto"
@@ -153,33 +164,46 @@ const Header = () => {
                         height={200}
                       />
                     </div>
-                    <nav className="flex shrink-0 items-start flex-col">
+                    <nav className="flex shrink-0 items-start flex-col  px-6 ">
                       <div className="nav-links">
                         <ul className="flex shrink-0 flex-col gap-y-7  items-start justify-start">
-                          <li className="mr-6">
-                            <Link href="/">
-                              <p className="text-white">HOME</p>
-                            </Link>
+                          <li className="mr-6" onClick={() => setShowMenu(false)}>
+                              <Link href="/" className='flex gap-2 items-center'>
+                                   <MdHome fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                                   <p className={isScrolled ? "text-black" : "text-white"}>HOME</p>
+                              </Link>
                           </li>
-                          <li className="mr-6">
-                            <Link href="/about">
-                              <p className="text-white">ABOUT</p>
-                            </Link>
+                          <li className="mr-6" onClick={() => setShowMenu(false)}>
+                              <Link href="/about" className='flex gap-2 items-center'>
+                                   <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                                   <p className={isScrolled ? "text-black" : "text-white"}>
+                                   ABOUT
+                                   </p>
+                              </Link>
+                         </li>
+                          <li className="mr-6" onClick={() => setShowMenu(false)}>
+                              <Link href="/market" className='flex gap-2 items-center'>
+                                   <GiShop fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                                   <p className={isScrolled ? "text-black" : "text-white"}>
+                                   MARKET
+                                   </p>
+                              </Link>
                           </li>
-                          <li className="mr-6">
-                            <Link href="/course">
-                              <p className="text-white">SERVICES</p>
-                            </Link>
+                          <li className="mr-6" onClick={() => setShowMenu(false)}>
+                              <Link href="/service" className='flex gap-2 items-center'>
+                                   <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                                   <p className={isScrolled ? "text-black" : "text-white"}>
+                                   SERVICES
+                                   </p>
+                              </Link>
                           </li>
-                          <li className="mr-6">
-                            <Link href="/blog">
-                              <p className="text-white">INDUSTRIES</p>
-                            </Link>
-                          </li>
-                          <li className="mr-6">
-                            <Link href="/contact">
-                              <p className="text-white">CONTACT</p>
-                            </Link>
+                          <li className="mr-6" onClick={() => setShowMenu(false)}>
+                              <Link href="/contact" className='flex gap-2 items-center'>
+                                        <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                                        <p className={isScrolled ? "text-black" : "text-white"}>
+                                        CONTACT
+                                        </p>
+                              </Link>
                           </li>
                         </ul>
                       </div>
