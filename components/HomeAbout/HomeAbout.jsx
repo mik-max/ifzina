@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import styles from './HomeAbout.module.css'
 import {motion} from "framer-motion"
