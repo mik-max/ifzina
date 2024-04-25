@@ -46,18 +46,11 @@ function HomeServices() {
           Contact Us Today to Discuss Your Project Needs and Learn How IFZINA Can Partner With You to Bring Your Vision to Life!
         </p>
       </SectionIntro>
-      <Container className="mt-10">
-        <div className="lg:flex lg:items-center lg:justify-end">
-          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[23.75rem] flex-none lg:w-[48rem]">
-              <StylizedImage
-                src={designer3}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
-            </FadeIn>
+      <div className="flex md:flex-row flex-col  w-[100%] border border-red-500">
+          <div className=" md:w-[50%]">
+               <img src="/images/service.jpg" alt="" />
           </div>
-          <List className="mt-16 lg:mt-0  lg:pl-4">
+          <List className="mt-16 md:w-[50%] border border-red-700 ">
             <ListItem title="Engineering Design and Consultation">
                 At IFZINA, we believe that every project is unique and deserves a tailored approach. 
                 Our engineering design and consultation services are crafted to fit the specific needs and goals of each client. 
@@ -78,14 +71,12 @@ function HomeServices() {
             </ListItem>
             <div className='mt-8 justify-start items-start flex'>
                <a href="/services" className="flex justify-center items-center w-[100%] lg:w-72 bg-black-300 hover:bg-[#1c1c1e] h-[56px] my-[7px] tracking-tighter text-white cursor-pointer px-8 text-[14px]  rounded-[100px] uppercase">
-                  Learn more ....
+                  Learn more
                </a>
             </div>
           </List>
           
         </div>
-
-      </Container>
     </div>
   )
 }
