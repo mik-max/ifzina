@@ -39,7 +39,7 @@ function TextArea({ label, ...props }) {
      <div className="group relative z-0 transition-all focus-within:z-10">
        <textarea
          type="text"
-         // rows="4"
+         rows="4"
          id={id}
          {...props}
          placeholder=" "
@@ -47,7 +47,7 @@ function TextArea({ label, ...props }) {
        />
        <label
          htmlFor={id}
-         className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+         className="pointer-events-none absolute left-6 top-1/3 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-95 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
        >
          {label}
        </label>
@@ -118,7 +118,7 @@ function TextArea({ label, ...props }) {
          {/* <Button type="submit" className="mt-10">
            Let’s work together
          </Button> */}
-          <button type='submit' value="send" className=' justify-start items-start flex'>
+          <button type='submit' value="send" className=' mt-12 justify-start items-start flex'>
                <span className="flex justify-center items-center w-[100%] lg:w-72 bg-black-300 hover:bg-[#1c1c1e] h-[56px] my-[7px] tracking-tighter text-white cursor-pointer px-8 text-[14px]  rounded-[100px] uppercase">Send Message</span>
           </button>
        </form>
@@ -190,7 +190,7 @@ function contact() {
         bgImage={'bg-about-bg'}
       />
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40 mb-24">
+      <Container className="mt-24 mx-16 sm:mt-32 lg:mt-40 mb-24">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
           <ContactForm />
           <ContactDetails />
