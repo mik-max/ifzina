@@ -94,7 +94,7 @@ const Header = () => {
                 <FaHelmetSafety fontSize={"18px"} className="mt-[-1px]" color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>CAREER </p>
               </Link>
-            </l>
+            </li>
             <li className={`mr-6  ${activeLink === '/about' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`} >
               <Link href="/about" className={`flex gap-2 items-center ${activeLink === '/about' ? 'active' : ''}`} >
                <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
