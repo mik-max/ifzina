@@ -1,8 +1,8 @@
 "use client"
 import { FadeIn } from "@/components/FadeIn";
-import HomeAbout from "@/components/HomeAbout/HomeAbout";
+// import HomeAbout from "@/components/CareerOpenings/CareerOpenings";
 import Banner from "@/components/HomeBanner/HomeBanner";
-import HomeMarket from "@/components/HomeMarket/HomeMarket";
+// import HomeMarket from "@/components/CareerJoin/CareerJoin";
 
 
 import { useState, useEffect } from "react";
@@ -75,10 +75,6 @@ export default function Home() {
           }
         />
       </section>
-      
-      <FadeIn className="py-">
-        <HomeAbout/>
-      </FadeIn>
 
 
 
@@ -132,9 +128,7 @@ export default function Home() {
       </div>
 
       </section>
-      <FadeIn >
-        <HomeMarket/>
-        </FadeIn>
+
 
       <FadeIn className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
           <div className='w-[100%]  pt-5'>
