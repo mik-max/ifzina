@@ -72,19 +72,21 @@ nav img{
   text-decoration: none;
   font-size: 13px;
 }
-.nav-links ul li::after{
+.nav-links ul li::after {
   content: '';
   margin-top: 1px;
   width: 0%;
   height: 2px;
-  /* background: theme('colors.black.300'); */
   display: block;
   margin: auto;
-  transition: 0.5s;
+  transition: width 0.5s; /* Change transition to only affect width */
 }
-.nav-links ul li:hover::after{
-  width: 100%;
+
+.nav-links ul li:hover::after,
+.nav-links ul li.active::after { /* Include the active class selector */
+  width: 100%; /* Set width to 100% for hover and active states */
 }
+
 .text-box{
   width: 90%;
   color: #fff;
