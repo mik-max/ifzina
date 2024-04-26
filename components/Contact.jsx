@@ -45,7 +45,7 @@ function TextArea({ label, placeholder, ...props }) {
          id={id}
          {...props}
          placeholder={placeholder}
-         className="peer block w-full border-l-2 border-neutral-300 bg-transparent px-6 pb-4 pt-16 text-base/6 text-neutral-950  transition focus:border-neutral-400 focus:outline-none placeholder:text-neutral-950 h-72 md:h-auto  "
+         className="peer block w-full lg:border-l-2 border-neutral-300 bg-transparent px-6 pb-4 pt-16 text-base/6 text-neutral-950  transition focus:border-neutral-400 focus:outline-none placeholder:text-neutral-950 h-72 md:h-auto  "
        />
        <label
          htmlFor={id}
