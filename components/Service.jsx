@@ -19,7 +19,7 @@ const Service = () => {
 
      <main className="flex flex-col md:gap-10 gap-5 mt-5">
        <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%] pt-5">
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}}   className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Engineering Design and Consultation
            </h2>
@@ -31,16 +31,16 @@ const Service = () => {
              detailed engineering designs, our team combines global expertise
              with local insights to deliver practical and sustainable outcomes.
            </p>
-         </div>
-         <div className="w-[100%] md:w-[50%]">
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}  className="w-[100%] md:w-[50%]">
            <img src="/images/consult.jpg" alt="" className="rounded-md" />
-         </div>
+         </motion.div>
        </section>
        <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%]">
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}  className="w-[100%] md:w-[50%]">
            <img src="/images/supply.jpg" alt="" className="rounded-md" />
-         </div>
-         <div className="w-[100%] md:w-[50%] pt-5">
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Procurement and Supply Chain Management
            </h2>
@@ -52,10 +52,10 @@ const Service = () => {
              network of trusted partners, we ensure that every procurement
              decision contributes to the success of the project.
            </p>
-         </div>
+         </motion.div>
        </section>
        <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%] pt-5">
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Construction and Project Management
            </h2>
@@ -68,16 +68,16 @@ const Service = () => {
              to execution and commissioning, to ensure that our clients' vision
              becomes a reality.`}
            </p>
-         </div>
-         <div className="w-[100%] md:w-[50%]">
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/construction.jpg" alt="" className="rounded-md" />
-         </div>
+         </motion.div>
        </section>
        <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%]">
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/turnkey.jpg" alt="" className="rounded-md" />
-         </div>
-         <div className="w-[100%] md:w-[50%] pt-5">
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              {" "}
              Turnkey Solutions for EPC Projects
@@ -91,10 +91,10 @@ const Service = () => {
              for innovation, we turn challenges into opportunities and dreams
              into reality.
            </p>
-         </div>
+         </motion.div>
        </section>
        <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%] pt-5">
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Service Provider to Major EPC Firms
            </h2>
@@ -106,20 +106,20 @@ const Service = () => {
              management services, we are committed to delivering added value
              and exceeding expectations every step of the way.`}
            </p>
-         </div>
-         <div className="w-[100%] md:w-[50%]">
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img
              src="/images/serviceProvider.jpg"
              alt=""
              className="rounded-md"
            />
-         </div>
+         </motion.div>
        </section>
        <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%]">
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/welding.jpg" alt="" className="rounded-md" />
-         </div>
-         <div className="w-[100%] md:w-[50%] pt-5">
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Welding and Fabrications
            </h2>
@@ -131,10 +131,10 @@ const Service = () => {
              metalwork, we take pride in our attention to detail and our
              commitment to excellence in every project we undertake.
            </p>
-         </div>
+         </motion.div>
        </section>
        <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%] pt-5">
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Workshop Production
            </h2>
@@ -146,16 +146,16 @@ const Service = () => {
              of quality and performance. At IFZINA, we don't just build – we
              create, innovate, and inspire.`}
            </p>
-         </div>
-         <div className="w-[100%] md:w-[50%]">
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/workshop.jpg" alt="" className="rounded-md" />
-         </div>
+         </motion.div>
        </section>
        <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
-         <div className="w-[100%] md:w-[50%]">
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/training.jpg" alt="" className="rounded-md" />
-         </div>
-         <div className="w-[100%] md:w-[50%] pt-5">
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Training at IFZINA
            </h2>
@@ -201,7 +201,7 @@ const Service = () => {
              inspiration from industry leaders like Fluor and Atkins while
              infusing it with IFZINA's unique tone and style`}
            </p>
-         </div>
+         </motion.div>
        </section>
      </main>
    </div>

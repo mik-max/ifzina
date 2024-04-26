@@ -11,6 +11,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import { Snackbar } from '@mui/material'
+import {motion} from 'framer-motion'
 function TextInput({ label, ...props }) {
    let id = useId()
  
@@ -40,14 +41,15 @@ function TextArea({ label, placeholder, ...props }) {
        <textarea
          type="text"
          rows="16"
+         
          id={id}
          {...props}
          placeholder={placeholder}
-         className="peer block w-full border-l-2 border-neutral-300 bg-transparent px-6 pb-4 pt-16 text-base/6 text-neutral-950  transition focus:border-neutral-400 focus:outline-none placeholder:text-neutral-950  "
+         className="peer block w-full border-l-2 border-neutral-300 bg-transparent px-6 pb-4 pt-16 text-base/6 text-neutral-950  transition focus:border-neutral-400 focus:outline-none placeholder:text-neutral-950 h-72 md:h-auto  "
        />
        <label
          htmlFor={id}
-         className="pointer-events-none absolute left-6 top-10 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-95 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-600"
+         className="pointer-events-none absolute left-6 top-6 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-500 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-100 w-full h-12 flex items-center  bg-white z-10 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-600"
        >
          {label}
        </label>
@@ -74,7 +76,7 @@ function TextArea({ label, placeholder, ...props }) {
        <form ref={form} onSubmit={handleSubmit}>
          
          <div className="isolate mt-6 flex  w-full borde flex-col gap-x-8 gap-y-10 lg:flex-row  -space-y-px  bg-white/50">
-            <div className="lg:w-[40%] w-full lg:pl-10 pl-0 lg:pr-4 pr-0  ">
+            <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="lg:w-[40%] w-full lg:pl-10 pl-0 lg:pr-4 pr-0  ">
                 <div className="w-[100%]  borde">
                       <h2 className="font-display  text-3xl md:text-6xl font-semibold text-neutral-950">
                         Write Us
@@ -94,15 +96,15 @@ function TextArea({ label, placeholder, ...props }) {
                         autoComplete="organization"
                       />
                 </div>
-            </div>
-            <div className="lg:w-[60%] w-full">
+            </motion.div>
+            <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}   className="lg:w-[60%] w-full">
               <TextArea label="Message" name="message" placeholder="Write text here..." />
               <button type='submit' value="send" className=' mt justify-start w-full items-start flex'>
                   <span className="flex justify-center items-center w-[100%]  bg-black-300 hover:bg-[#1c1c1e] h-[56px] my-[px] tracking-tight text-white cursor-pointer px-8 text-[14px] font-semibold text-lg uppercase">
                     Send Message
                   </span>
               </button>
-            </div>
+            </motion.div>
          </div>
        </form>
        <Snackbar
