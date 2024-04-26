@@ -3,6 +3,7 @@
 import React from 'react'
 import Banner from './Banner/Banner'
 import {motion} from "framer-motion"
+import { FadeIn } from './FadeIn'
 const About = () => {
   return (
      <div>
@@ -16,93 +17,93 @@ const About = () => {
      <main className='flex flex-col md:gap-10 gap-5 mt-5'>
         
      <section className='flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'>
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Company Overview</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>IFZINA is a dynamic EPC company based in Lagos, Nigeria, specializing in providing comprehensive engineering, procurement, and construction services across various industries.</p>
-         </div>
-         <div className='w-[100%] md:w-[50%]'>
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}  className='w-[100%] md:w-[50%]'>
               <img src="/images/overview.jpg" alt="" className='rounded-md' />
-         </div>
+         </motion.div>
      </section>
      <section className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
-         <div className='w-[100%] md:w-[50%]'>
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className='w-[100%] md:w-[50%]'>
               <img src="/images/mission.jpg" alt="" className='rounded-md' />
-         </div>
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Mission and Vision</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>Our mission at IFZINA is to deliver innovative and sustainable solutions that exceed client expectations while contributing to the socio-economic development of Nigeria. We envision being the leading EPC provider in the region, recognized for our commitment to excellence and integrity.</p>
-         </div>
+         </motion.div>
      </section>
      <section className='flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
          
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'> Values and Philosophy</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>At  IFZINA, we are guided by the values of integrity, professionalism, collaboration, and excellence. We believe in fostering long-term relationships with our clients, suppliers, and stakeholders based on mutual respect and trust.</p>
-         </div>
-         <div className='w-[100%] md:w-[50%]'>
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}  className='w-[100%] md:w-[50%]'>
               <img src="/images/value1.jpg" alt="" className='rounded-md' />
-         </div>
+         </motion.div>
      </section>
      <section className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
-         <div className='w-[100%] md:w-[50%]'>
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className='w-[100%] md:w-[50%]'>
               <img src="/images/value2.jpg" alt="" className='rounded-md' />
-         </div>
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>History</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>Established in 20XX, IFZINA has rapidly emerged as a trusted name in the Nigerian EPC industry. With a proven track record of successful projects and a dedicated team of professionals, we continue to set new standards of excellence in our field.</p>
-         </div>
+         </motion.div>
      </section>
      <section className='flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Team Members</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>Our team comprises highly skilled engineers, project managers, and technical experts with extensive experience in their respective fields. Led by visionary leaders and seasoned industry professionals, we are committed to delivering high-quality solutions tailored to meet our clients' needs.</p>
-         </div>
-         <div className='w-[100%] md:w-[50%]'>
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}  className='w-[100%] md:w-[50%]'>
               <img src="/images/team.jpg" alt="" className='rounded-md' />
-         </div>
+         </motion.div>
      </section>
      <section className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
-         <div className='w-[100%] md:w-[50%]'>
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className='w-[100%] md:w-[50%]'>
               <img src="/images/price2.jpg" alt="" className='rounded-md' />
-         </div>
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Unique Selling Proposition (USP)</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>What sets IFZINA apart is our unwavering commitment to quality, safety, and innovation. We leverage cutting-edge technologies and best practices to deliver cost-effective solutions while maintaining the highest standards of performance and reliability.</p>
-         </div>
+         </motion.div>
      </section>
      <section className='flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
          
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Portfolio</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>Over the years, we have had the privilege of serving a diverse range of clients across industries such as oil and gas, power generation, infrastructure, and renewable energy. Our portfolio showcases our expertise in executing complex projects and delivering tangible results that drive our clients' success.</p>
-         </div>
-         <div className='w-[100%] md:w-[50%]'>
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}  className='w-[100%] md:w-[50%]'>
               <img src="/images/profile.jpg" alt="" className='rounded-md' />
-         </div>
+         </motion.div>
      </section>
      
      <section className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
-         <div className='w-[100%] md:w-[50%]'>
+         <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className='w-[100%] md:w-[50%]'>
               <img src="/images/diversity.jpg" alt="" className='rounded-md' />
-         </div>
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Diversity and Inclusion</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>At IFZINA, we are committed to fostering a culture of diversity and inclusion. We believe that diversity strengthens our team, drives innovation, and enhances our ability to serve our clients effectively. We strive to create an environment where every voice is heard, respected, and valued.</p>
-         </div>
+         </motion.div>
         
      </section>
      <section className='flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
          
-         <div className='w-[100%] md:w-[50%] pt-5'>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>Ethics</h2>
               <p className='text-[15px] font-[500] text-[#56616B] leading-6'>Integrity is at the core of everything we do at IFZINA. We conduct our business with honesty, transparency, and accountability, adhering to the highest ethical standards. Our commitment to ethical behavior guides our interactions with clients, partners, and stakeholders, ensuring mutual trust and long-term relationships built on integrity.</p>
-         </div>
-         <div className='w-[100%] md:w-[50%]'>
+         </motion.div>
+         <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}  className='w-[100%] md:w-[50%]'>
               <img src="/images/ethics.jpg" alt="" className='rounded-md' />
-         </div>
+         </motion.div>
      </section>
 
-     <section className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
+     <FadeIn className='flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
     
          <div className='w-[100%]  pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl  mb-[5px] text-center'>Testimonials</h2>
@@ -125,7 +126,7 @@ const About = () => {
                    </div>
               </div>
          </div>
-     </section>
+     </FadeIn>
 
      </main>
 

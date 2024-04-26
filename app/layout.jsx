@@ -7,15 +7,24 @@ import LauchCmp from "@/components/LauchCmp";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "IFZINA | (EPC) Company",
-  description: "Official Website of IFZINA | Engineering, Procurement and Construction Company.",
+
+  title: "IFZINA: Premier EPC Partner in Nigeria | Engineering, Procurement, and Construction, Maintenance",
+  description: "Learn about IFZINA, a leading EPC company in Nigeria, offering comprehensive engineering, procurement, and construction services. Discover our mission, values, portfolio, and client testimonials.",
+  keywords:"EPC company, engineering services, Nigeria, sustainable solutions, renewable energy, solar, wind energy, building services, maintenance"
 };
 
 export default function RootLayout({ children }) {
+  const links = [
+    { path: '/', label: 'HOME' },
+    { path: '/about', label: 'ABOUT' },
+    { path: '/market', label: 'MARKET' },
+    { path: '/service', label: 'SERVICES' },
+    { path: '/contact', label: 'CONTACT' }
+  ];
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Header links={links} />
         {children}
         <LauchCmp/>
         <Footer />
