@@ -9,13 +9,35 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { GiShop } from "react-icons/gi";
 import { MdHomeRepairService } from "react-icons/md";
 import { MdPermContactCalendar } from "react-icons/md";
-
+import { usePathname } from 'next/navigation';
 import { Dialog, Menu, Transition } from '@headlessui/react'
 
+
 const Header = () => {
+  const router = usePathname(); 
   const [showMenu, setShowMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
 
+  useEffect(() => {
+    // Check the pathname of the current route and set the active link accordingly
+    setActiveLink(router);
+  }, [router]);
+
+//   useEffect(() => {
+//     // Retrieve active link from local storage on component mount
+//     const storedActiveLink = localStorage.getItem('activeLink');
+//     if (storedActiveLink) {
+//       setActiveLink(storedActiveLink);
+//     }
+//   }, []);
+
+//  // Function to handle menu item click
+//  const handleMenuItemClick = (menuItem) => {
+//   setActiveLink(menuItem);
+//   // Save active link to local storage
+//   localStorage.setItem('activeLink', menuItem);
+// };
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -47,31 +69,31 @@ const Header = () => {
             className="  md:flex justify-end hidden"
             // style={{ right: showMenu ? 0 : -200 }}
           >
-            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+            <li className={`${activeLink === '/' ? 'active' : ''} mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
                
-              <Link href="/" className='flex gap-2 items-center'>
+              <Link href="/" className={`flex gap-2 items-center ${activeLink === '/' ? 'active' : ''}`} >
                <MdHome fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>HOME</p>
               </Link>
             </li>
-            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`} >
-              <Link href="/about" className='flex gap-2 items-center'>
+            <li className={`mr-6  ${activeLink === '/about' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`} >
+              <Link href="/about" className={`flex gap-2 items-center ${activeLink === '/about' ? 'active' : ''}`} >
                <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>
                   ABOUT
                 </p>
               </Link>
             </li>
-            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
-              <Link href="/market" className='flex gap-2 items-center'>
+            <li className={`mr-6 ${activeLink === '/market' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+              <Link href="/market" className={`flex gap-2 items-center `} >
               <GiShop fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>
                   MARKET
                 </p>
               </Link>
             </li>
-            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
-              <Link href="/service" className='flex gap-2 items-center'>
+            <li className={`mr-6 ${activeLink === '/service' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+              <Link href="/service" className={`flex gap-2 items-center `}>
               <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>
                   SERVICES
@@ -79,8 +101,8 @@ const Header = () => {
               </Link>
             </li>
             
-            <li className={`mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
-              <Link href="/contact" className='flex gap-2 items-center'>
+            <li className={`mr-6 ${activeLink === '/contact' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+              <Link href="/contact" className={`flex gap-2 items-center `} >
                     <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
                     <p className={isScrolled ? "text-black" : "text-white"}>
                     CONTACT
@@ -168,13 +190,13 @@ const Header = () => {
                       <div className="nav-links">
                         <ul className="flex shrink-0 flex-col gap-y-7  items-start justify-start">
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
-                              <Link href="/" className='flex gap-2 items-center'>
+                              <Link href="/" className='flex gap-2 items-center' isActive={() => setActiveLink('home')}>
                                    <MdHome fontSize={'18px'} className='mt-[-1px]' color="white" />
                                    <p className="text-white">HOME</p>
                               </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
-                              <Link href="/about" className='flex gap-2 items-center'>
+                              <Link href="/about" className='flex gap-2 items-center' isActive={() => setActiveLink('about')}>
                                    <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color="white" />
                                    <p className="text-white">
                                    ABOUT
@@ -182,7 +204,7 @@ const Header = () => {
                               </Link>
                          </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
-                              <Link href="/market" className='flex gap-2 items-center'>
+                              <Link href="/market" className='flex gap-2 items-center' isActive={() => setActiveLink('market')}>
                                    <GiShop fontSize={'18px'} className='mt-[-1px]' color="white" />
                                    <p className="text-white">
                                    MARKET
@@ -190,7 +212,7 @@ const Header = () => {
                               </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
-                              <Link href="/service" className='flex gap-2 items-center'>
+                              <Link href="/service" className='flex gap-2 items-center' isActive={() => setActiveLink('service')}>
                                    <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color="white" />
                                    <p className="text-white">
                                    SERVICES
@@ -198,7 +220,7 @@ const Header = () => {
                               </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
-                              <Link href="/contact" className='flex gap-2 items-center'>
+                              <Link href="/contact" className='flex gap-2 items-center' isActive={() => setActiveLink('contact')}>
                                         <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color="white" />
                                         <p className="text-white">
                                         CONTACT
