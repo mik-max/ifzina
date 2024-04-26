@@ -73,7 +73,7 @@ function TextArea({ label, placeholder, ...props }) {
      <div className="lg:order-las borde w-full">
        <form ref={form} onSubmit={handleSubmit}>
          
-         <div className="isolate mt-6 flex  w-full borde flex-col gap-x-8 gap-y-20 lg:flex-row  -space-y-px  bg-white/50">
+         <div className="isolate mt-6 flex  w-full borde flex-col gap-x-8 gap-y-10 lg:flex-row  -space-y-px  bg-white/50">
             <div className="lg:w-[40%] w-full lg:pl-10 pl-0 lg:pr-4 pr-0  ">
                 <div className="w-[100%]  borde">
                       <h2 className="font-display  text-3xl md:text-6xl font-semibold text-neutral-950">
