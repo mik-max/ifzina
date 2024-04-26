@@ -3,8 +3,8 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FaFacebook } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,7 +47,33 @@ const Footer = () => {
                     <p className="text-[#56616B]  text-sm leading-7" ><span>Phone:</span> +234-803-4090741 </p>
                
                     <p className="text-[#56616B]  text-sm leading-7"><span>Email:</span> info@ifzina.com</p>
-               
+                    <div className="flex space-x-3 mt-4 ">
+                         <Link
+                               href="target_blank"
+                              className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-white  z-50 h-12`}
+                         >
+                              <FiInstagram  color="#000" className="w-6 h-6"  />
+                         </Link>
+                         <Link
+                               href="target_blank"
+                              className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-white  z-50 h-12 `}
+                         >
+                              <FaTwitter  color="#000" className="w-6 h-6"  />
+                         </Link>
+                         <Link
+                               href="target_blank"
+                              className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-white  z-50 h-12`}
+                         >
+                              <FaLinkedinIn  color="#000" className="w-6 h-6"  />
+                         </Link>
+                         <Link
+                               href="target_blank"
+                              className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-white  z-50 h-12`}
+                         >
+                              <FaFacebookF  color="#000" className="w-6 h-6"  />
+                         </Link>
+                         
+                    </div>
 
                </div>
           </div>
