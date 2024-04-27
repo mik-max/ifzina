@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Banner from '@/components/Banner/Banner'
-import { useId, useRef } from 'react'
+import { useId, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import emailjs from "@emailjs/browser"
 import { Border } from '@/components/Border'
@@ -12,6 +12,9 @@ import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import { Snackbar } from '@mui/material'
 import {motion} from 'framer-motion'
+
+
+
 function TextInput({ label, ...props }) {
    let id = useId()
  
@@ -35,7 +38,7 @@ function TextInput({ label, ...props }) {
  }
 function TextArea({ label, placeholder, ...props }) {
    let id = useId()
- 
+  
    return (
      <div className="group relative z-0 transition-all focus-within:z-10">
        <textarea
@@ -61,6 +64,7 @@ function TextArea({ label, placeholder, ...props }) {
    const form = useRef();
    const [open, setOpen] = React.useState(false);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs.sendForm('service_jvy8jxg', 'template_ej15ayr', form.current, 'HdCcNBZnVuXwkpDeS')
@@ -71,13 +75,22 @@ function TextArea({ label, placeholder, ...props }) {
         console.log(error.text);
       });
   }
+  const [email, setEmail] = useState('')
+  
+  useEffect(() => {
+     const storedValue = localStorage.getItem("inputValue");
+      if (storedValue) {
+        setEmail(storedValue);
+      }else{ setEmail('not set yet');}
+      // console.log(email)
+  }, []);
    return (
      <div className="lg:order-las borde w-full">
        <form ref={form} onSubmit={handleSubmit}>
          
          <div className="isolate mt-6 flex  w-full borde flex-col gap-x-8 gap-y-10 lg:flex-row  -space-y-px  bg-white/50">
             <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="lg:w-[40%] w-full lg:pl-10 pl-0 lg:pr-4 pr-0  ">
-                <div className="w-[100%]  borde">
+                <div className="w-[100%]  ">
                       <h2 className="font-display  text-3xl md:text-6xl font-semibold text-neutral-950">
                         Write Us
                       </h2>
@@ -88,7 +101,7 @@ function TextArea({ label, placeholder, ...props }) {
                         type="email"
                         name="from_email"
                         autoComplete="email"
-                        placeholder="boy"
+                        value={email}
                       />
                       <TextInput
                         label="Subject"

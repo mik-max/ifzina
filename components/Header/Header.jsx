@@ -89,7 +89,7 @@ const Header = () => {
                 <p className={isScrolled ? "text-black" : "text-white"}> MARKET</p>
               </Link>
             </li>  
-            <li className={`mr-6 ${activeLink === '/market' ? 'active' : ''} ${ isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
+            <li className={`mr-6 ${activeLink === '/career' ? 'active' : ''} ${ isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
               <Link href="/career" className={`flex gap-2 items-center`}>
                 <FaHelmetSafety fontSize={"18px"} className="mt-[-1px]" color={isScrolled ? "black" : "white"} />
                 <p className={isScrolled ? "text-black" : "text-white"}>CAREER </p>
