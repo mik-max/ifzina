@@ -7,11 +7,31 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        primary: "#004080",
+        blue: {
+          500: "#0073E5"
+        },
+        black:{
+          300:"#131316"
+        },
+        grey:{
+          400: "#56616B"
+        },
+        secondary: {
+          DEFAULT: "#fefae0",
+          text: "#777777",
+        },
+        accent: {
+          light: "#fefae0",
+          dark: "#333333",
+        },
       },
+      backgroundImage: {
+          'launch-bg': "url('/images/launch.jpg')",
+          'about-bg': "linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url('/images/bg1.jpg')",
+          'market-bg': "linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url('/images/markets.jpg')",
+     }
     },
   },
   plugins: [],
