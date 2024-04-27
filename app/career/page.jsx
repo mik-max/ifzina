@@ -7,8 +7,18 @@ import CareerJoin from "@/components/CareerJoin/CareerJoin";
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa6";
 import { motion } from "framer-motion";
-
 import styles from './Career.module.css';
+
+
+// export const metaData = {
+//   title: "Careers at IFZINA | Join Our Team of EPC Professionals",
+//   description:
+//     " Explore career opportunities at IFZINA, a leading EPC company in Nigeria. Discover why you should choose IFZINA, current job openings, application instructions, and how to join our dynamic team.",
+//   keywords:
+//     "career opportunities, EPC professionals, job openings, application process , engineering jobs, renewable energy careers, maintenance positions ",
+// };
+
+
 
 export default function Home() {
   const [showButton, setShowButton] = useState(false);
@@ -96,7 +106,7 @@ export default function Home() {
             whileInView={"animate"}
             viewport={{ once: true }}
           >
-            <img src="/images/service.jpg" alt="" className="rounded-md" />
+            <img src="/images/chooseIfzina.jpg" alt="Choose IFZINA" className="rounded-md" />
           </motion.div>
           <div className="flex flex-col w-[100%] md:w-[50%] pt-5 gap-10">
             <p className="text-[16px] font-[500] text-[#56616B] leading-6 text-center">
@@ -193,14 +203,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <FadeIn className="py-[3px]">
-        <CareerOpenings />
-      </FadeIn>
+
       <section className={styles.staticSection}>
         <div className={styles.staticContentWrap}>
-          <h1 >
-            Join Us
-          </h1>
+          <div>
+            <h1>Join Us</h1>
+          </div>
           <div className="p-2">
             <p>
               Are you ready to take the next step in your career? Join us at
@@ -212,6 +220,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <FadeIn className="py-[3px]">
+        <CareerOpenings />
+      </FadeIn>
       {/* <section className="h-[60vh] flex items-center md:mt-10 mt-5 bg-[#C90] rounded-3xl md:mx-[25px] mx-[15px] mb-[25px] py-[50px] lg:px-[100px] px-[20px]">
         <div className="relative ">
           <h1 className="text-[#131316] lg:text-5xl md:text-4xl text-2xl font-bold tracking-tighter mb-[5px]">
