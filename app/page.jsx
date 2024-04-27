@@ -114,6 +114,7 @@ export default function Home() {
       <div className='relative '>
                     <h1 className='text-[#131316] lg:text-5xl md:text-4xl text-2xl font-bold tracking-tighter mb-[5px]'>With over 10k+ satisfied clients,</h1>
                     <h3 className='text-[#131316] md:text-xl text-md font-bolsemibold tracking-tighter'>IFZINA stands out as one of your most trusted premier EPC partner in Nigeria.</h3>
+                    
                     <form autoComplete='off'>
                          <div className='flex mt-8 items-center bg-white rounded-[100px] md:h-[72px] h-[56px] md:w-[fit-content] w-[100%] text-black md:text-[18px] text-[16px] pr-[7px]'>
                               <input type='email' required className='md:text-[18px] text-[#56616B] text-[16px] pl-[20px] rounded-[100px] bg-white focus:outline-none md:w-[350px]  tracking-tight ' placeholder='email address' />
