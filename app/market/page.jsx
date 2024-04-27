@@ -3,6 +3,7 @@ import React from 'react';
 import Market from '@/components/Market';
 
 
+
 export const metadata = {
      title: "Markets | IFZINA - Engineering, Procurement, Construction and Maintenance Services in Nigeria",
      description: "Explore the diverse markets served by IFZINA, including oil and gas, power generation, infrastructure, renewable energy, telecommunications, and more. Discover our expertise and capabilities.",
@@ -12,7 +13,6 @@ export const metadata = {
 const Page = () => {
 
      return (
-          
           <div>
                <Market/>
           </div>
