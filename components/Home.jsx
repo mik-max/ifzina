@@ -69,6 +69,7 @@ const Home = () => {
       };
       const handleLinkClick = () => {
         localStorage.setItem("inputValue", inputValue);
+        setInputValue("");
       };
 
   return (
