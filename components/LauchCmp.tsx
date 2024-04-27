@@ -14,7 +14,7 @@ const LauchCmp = () => {
         const handleLinkClick = () => {
           // Save input value to localStorage
           localStorage.setItem("inputValue", inputValue);
-     //     console.log( localStorage.getItem("inputValue"))
+          setInputValue("");
           // Navigate to another page
           router.push("/another-page");
         };

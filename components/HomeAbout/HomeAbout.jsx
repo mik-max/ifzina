@@ -35,13 +35,13 @@ function HomeAbout() {
           whileInView={"animate"}
           viewport={{ once: true }}
           custom={0}
-          className={` ${styles.contentWrap} bg-[#EFF1F6] `}
+          className={` ${styles.contentWrap}  bg-[#EFF1F6] `}
         >
           <div className="w-[100%] md:w-[100%]">
             <img src="/images/overview.jpg" alt="" className="rounded-t-md" />
           </div>
           <h3
-            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl md:mb-[24px] mb-[10px]`}
+            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl `}
           >
             Company Overview
           </h3>
@@ -56,14 +56,14 @@ function HomeAbout() {
           initial="initial"
           whileInView={"animate"}
           viewport={{ once: true }}
-          custom={0}
+          custom={1}
           className={` ${styles.contentWrap} bg-[#EFF1F6] `}
         >
           <div className="w-[100%] md:w-[100%]">
             <img src="/images/mission.jpg" alt="" className="rounded-t-md" />
           </div>
           <h3
-            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl md:mb-[24px] mb-[10px]`}
+            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl `}
           >
             Mission and Vission
           </h3>
@@ -80,14 +80,14 @@ function HomeAbout() {
           initial="initial"
           whileInView={"animate"}
           viewport={{ once: true }}
-          custom={0}
+          custom={2}
           className={` ${styles.contentWrap} bg-[#EFF1F6] w-[50%] `}
         >
           <div className="w-[100%] md:w-[100%]">
             <img src="/images/team.jpg" alt="" className="rounded-t-md" />
           </div>
           <h3
-            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl md:mb-[24px] mb-[10px]`}
+            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl `}
           >
             Team Members
           </h3>

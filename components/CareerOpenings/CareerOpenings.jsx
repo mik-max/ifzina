@@ -31,13 +31,13 @@ function CareerOpenings() {
           whileInView={"animate"}
           viewport={{ once: true }}
           custom={0}
-          className={` ${styles.contentWrap} bg-[#EFF1F6] `}
+          className={` ${styles.contentWrap} bg-[#EFF1F6] rounded-b-xl pb-5`}
         >
           <div className="w-[100%] md:w-[100%]">
             <img src="/images/jobOpening.jpg" alt="" className="rounded-t-md" />
           </div>
           <h3
-            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl md:mb-[24px] mb-[10px]`}
+            className={`${styles.h3} font-bold text-[#131316] md:text-2xl mt-[15px] text-xl `}
           >
             Current Openings
           </h3>
@@ -56,13 +56,13 @@ function CareerOpenings() {
           whileInView={"animate"}
           viewport={{ once: true }}
           custom={0}
-          className={` ${styles.contentWrap} bg-[#EFF1F6] w-[50%] `}
+          className={` ${styles.contentWrap} bg-[#EFF1F6] w-[50%] rounded-b-xl pb-5 `}
         >
           <div className="w-[100%] md:w-[100%]">
             <img src="/images/apply.jpg" alt="" className="rounded-t-md" />
           </div>
           <h3
-            className={`${styles.h3} font-bold text-[#131316] md:text-2xl text-xl md:mb-[24px] mb-[10px]`}
+            className={`${styles.h3} font-bold text-[#131316] md:text-2xl mt-[15px] text-xl `}
           >
             How to Apply
           </h3>
