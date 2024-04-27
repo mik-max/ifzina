@@ -1,20 +1,46 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client"
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Banner from './Banner/Banner'
 import {motion} from "framer-motion"
 import { FadeIn } from './FadeIn'
+import { FaArrowUp } from "react-icons/fa6";
 const About = () => {
+
+     const [showButton, setShowButton]=useState(false);
+     const scrollFunction = () => {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            setShowButton(true);
+          } else {
+            setShowButton(false);
+          }
+     };
+     useEffect(() => {
+          window.onscroll = function() {
+            scrollFunction();
+          };
+     }, []);
+     const topFunction = () => {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+     };
+
   return (
      <div>
      <Banner
        first={
-         <h1 className="text-3xl md:text-6xl  font-semibold text-center my-8">About Us</h1>
+           <h1 className="text-3xl md:text-6xl  font-semibold text-center my-8">About Us</h1>
+               
        }
        bgImage={'bg-about-bg'}
      />
 
      <main className='flex flex-col md:gap-10 gap-5 mt-5'>
+
+          
         
      <section className='flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'>
          <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
@@ -129,6 +155,20 @@ const About = () => {
      </FadeIn>
 
      </main>
+     <div>
+       {showButton && (
+         <button
+           onClick={topFunction}
+           id="myBtn"
+           title="Go to top"
+           className={`fixed flex justify-center items-center right-4 bottom-4 animate-bounce w-16 rounded-full bg-black-300  z-50 h-16 ${
+             showButton ? "block" : "hidden"
+           }`}
+         >
+           <FaArrowUp color="#fff" className="w-6 h-6" />
+         </button>
+       )}
+     </div>
 
    </div>
   )

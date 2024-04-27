@@ -19,7 +19,8 @@ export default function RootLayout({ children }) {
     { path: '/about', label: 'ABOUT' },
     { path: '/market', label: 'MARKET' },
     { path: '/service', label: 'SERVICES' },
-    { path: '/contact', label: 'CONTACT' }
+    { path: '/contact', label: 'CONTACT' },
+    { path: '/career', label: 'CAREER' }
   ];
   return (
     <html lang="en">

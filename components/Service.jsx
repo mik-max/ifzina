@@ -1,11 +1,33 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client"
-import React from 'react'
-import {motion} from 'framer-motion'
-import Banner from './Banner/Banner'
+import React, {useState, useEffect} from 'react';
+import { FaArrowUp } from "react-icons/fa6";
+import {motion} from 'framer-motion';
+import Banner from './Banner/Banner';
 
 
 const Service = () => {
+
+     const [showButton, setShowButton]=useState(false);
+     const scrollFunction = () => {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            setShowButton(true);
+          } else {
+            setShowButton(false);
+          }
+     };
+     useEffect(() => {
+          window.onscroll = function() {
+            scrollFunction();
+          };
+     }, []);
+     const topFunction = () => {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+     };
   return (
      <div>
      <Banner
@@ -54,7 +76,7 @@ const Service = () => {
            </p>
          </motion.div>
        </section>
-       <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
+       <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Construction and Project Management
@@ -73,7 +95,7 @@ const Service = () => {
            <img src="/images/construction.jpg" alt="" className="rounded-md" />
          </motion.div>
        </section>
-       <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
+       <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/turnkey.jpg" alt="" className="rounded-md" />
          </motion.div>
@@ -93,7 +115,7 @@ const Service = () => {
            </p>
          </motion.div>
        </section>
-       <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
+       <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Service Provider to Major EPC Firms
@@ -115,7 +137,7 @@ const Service = () => {
            />
          </motion.div>
        </section>
-       <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
+       <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/welding.jpg" alt="" className="rounded-md" />
          </motion.div>
@@ -133,7 +155,7 @@ const Service = () => {
            </p>
          </motion.div>
        </section>
-       <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
+       <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Workshop Production
@@ -151,7 +173,7 @@ const Service = () => {
            <img src="/images/workshop.jpg" alt="" className="rounded-md" />
          </motion.div>
        </section>
-       <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
+       <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
            <img src="/images/training.jpg" alt="" className="rounded-md" />
          </motion.div>
@@ -204,6 +226,20 @@ const Service = () => {
          </motion.div>
        </section>
      </main>
+     <div>
+       {showButton && (
+         <button
+           onClick={topFunction}
+           id="myBtn"
+           title="Go to top"
+           className={`fixed flex justify-center items-center right-4 bottom-4 animate-bounce w-16 rounded-full bg-black-300  z-50 h-16 ${
+             showButton ? "block" : "hidden"
+           }`}
+         >
+           <FaArrowUp color="#fff" className="w-6 h-6" />
+         </button>
+       )}
+     </div>
    </div>
   )
 }

@@ -1,9 +1,32 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client'
-import React from 'react'
-import {motion} from 'framer-motion'
-import Banner from './Banner/Banner'
+import React, {useState, useEffect} from 'react';
+import {motion} from 'framer-motion';
+import Banner from './Banner/Banner';
+import { FaArrowUp } from "react-icons/fa6";
 const Market = () => {
+
+     const [showButton, setShowButton]=useState(false);
+     const scrollFunction = () => {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            setShowButton(true);
+          } else {
+            setShowButton(false);
+          }
+     };
+     useEffect(() => {
+          window.onscroll = function() {
+            scrollFunction();
+          };
+     }, []);
+     const topFunction = () => {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+     };
+
   return (
      <div>
      <Banner
@@ -120,6 +143,20 @@ const Market = () => {
      </section>
 
      </main>
+     <div>
+       {showButton && (
+         <button
+           onClick={topFunction}
+           id="myBtn"
+           title="Go to top"
+           className={`fixed flex justify-center items-center right-4 bottom-4 animate-bounce w-16 rounded-full bg-black-300  z-50 h-16 ${
+             showButton ? "block" : "hidden"
+           }`}
+         >
+           <FaArrowUp color="#fff" className="w-6 h-6" />
+         </button>
+       )}
+     </div>
 
 </div>
   )

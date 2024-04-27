@@ -36,6 +36,14 @@ function CareerJoin() {
               professionally, we invite you to explore opportunities to join our
               dynamic team.`}
             </p>
+            <div className="flex justify-start items-center mt-5 ">
+              <a
+                href="/contact"
+                className="flex justify-center items-center w-[100%] lg:w-72 bg-black-300 hover:bg-[#1c1c1e] h-[56px] my-[7px] tracking-tighter text-white cursor-pointer px-8 text-[14px]  rounded-[100px] uppercase"
+              >
+                Reach Us
+              </a>
+            </div>
           </motion.div>
         </section>
 
@@ -61,14 +69,6 @@ function CareerJoin() {
                </motion.div>
                
             </section> */}
-        <div className="mt- justify-start items-start flex lg:px-[100px] px-[25px] ">
-          <a
-            href="/contact"
-            className="flex justify-center items-center w-[100%] lg:w-72 bg-black-300 hover:bg-[#1c1c1e] h-[56px] my-[7px] tracking-tighter text-white cursor-pointer px-8 text-[14px]  rounded-[100px] uppercase"
-          >
-            Reach Us
-          </a>
-        </div>
       </main>
     </div>
   );
