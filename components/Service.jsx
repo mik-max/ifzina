@@ -175,8 +175,31 @@ const Service = () => {
        </section>
        <section className="flex flex-col md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0 , x:-100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
-           <img src="/images/training.jpg" alt="" className="rounded-md" />
+           <img src="/images/maintenance.jpg" alt="" className="rounded-md" />
          </motion.div>
+         <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
+           <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
+               Maintenance Services
+           </h2>
+           <p className="text-[15px] font-[500] text-[#56616B] mb-[10px] leading-6">
+             {`At IFZINA, we understand that the successful operation of your facilities relies on proactive and reliable maintenance services. That's why we offer comprehensive maintenance solutions designed to maximize uptime, extend asset lifespan, and optimize performance while minimizing downtime and operational disruptions.`}
+           </p>
+           <h4 className='text-[16px] font-bold text-[#131316] mb-[8px] mt-[4px] '>Our Approach</h4>
+           <p className="text-[15px] font-[500] text-[#56616B] mb-[10px] leading-6">
+               
+               With IFZINA's maintenance services, you can count on a proactive and data-driven approach that ensures the continued reliability and efficiency of your facilities. Our team of experienced professionals combines global expertise with local insight to deliver tailored maintenance solutions that meet your unique needs and requirements.
+           </p>
+           <h4 className='text-[15px] font-bold text-[#131316] mb-[8px] mt-[4px] '>Key Features</h4>
+           <ol type='1' className=''>
+               <li className='text-[16px] font-[500] text-[#56616B] mb-[10px] leading-6'>
+                    <span className='text-[#131316] font-[500]'>1. Predictive Maintenance: </span>
+                    Leveraging advanced analytics and condition monitoring technologies, we anticipate and address potential equipment failures before they occur, minimizing downtime and maximizing asset reliability.
+               </li>
+           </ol>
+
+         </motion.div>
+       </section>
+       <section className="flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]">
          <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="w-[100%] md:w-[50%] pt-5">
            <h2 className="font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]">
              Training at IFZINA
@@ -223,6 +246,9 @@ const Service = () => {
              inspiration from industry leaders like Fluor and Atkins while
              infusing it with IFZINA's unique tone and style`}
            </p>
+         </motion.div>
+         <motion.div initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}} className="w-[100%] md:w-[50%]">
+           <img src="/images/training.jpg" alt="" className="rounded-md" />
          </motion.div>
        </section>
      </main>
