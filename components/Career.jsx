@@ -65,7 +65,7 @@ const Career = () => {
         };
 
   return (
-     <div>
+     <div className='mt-[100px]'>
      <section>
        <Banner
          first={
