@@ -62,7 +62,7 @@ const Header = () => {
     >
       <nav className="flex justify-between items-center p-4">
         <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={200} height={200} />
+          <Image src="/images/ifzina_logo.png" alt="Logo" width={200} height={200} />
         </Link>
         <div className="nav-links">
           {/* <BiMenu className="fa text-white text-lg" onClick={() => setShowMenu(showMenu)}/> */}
