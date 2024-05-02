@@ -29,7 +29,7 @@ const About = () => {
      };
 
   return (
-     <div>
+     <div className='mt-[100px]'>
      <Banner
        first={
            <h1 className="text-3xl md:text-6xl  font-semibold text-center my-8">About Us</h1>
