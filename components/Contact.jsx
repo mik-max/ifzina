@@ -180,7 +180,7 @@ function TextArea({ label, placeholder, ...props }) {
 
 function Contact() {
   return (
-    <div>
+    <div className='mt-[100px]'>
        <Banner
         first={
           <h1 className="text-3xl md:text-6xl  font-semibold text-center my-8">Contact Us</h1>
