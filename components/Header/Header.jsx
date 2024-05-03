@@ -57,56 +57,56 @@ const Header = () => {
 
   return (
     <header
-      className={`${isScrolled ? "bg-white shadow-md" : "bg-white"} 
-      ${"w-full fixed top-0 left-0 right-0 z-10 transition-all ease-in duration-300 h-[100px]"}`}
+      className={`${isScrolled ? "bg-white shadow-md" : "bg-transparent"} 
+      ${"w-full fixed top-0 left-0 right-0 z-10 transition-all ease-in duration-300"}`}
     >
       <nav className="flex justify-between items-center p-4">
         <Link href="/">
-          <Image src="/images/ifzina_logo.png" alt="Logo" width={200} height={200} />
+          <Image className='rounded-lg' src={isScrolled?"/images/ifzina_logo.png":"/images/ifzina_logo.jpg"} alt="Logo" width={200} height={200} />
         </Link>
         <div className="nav-links">
-          {/* <BiMenu className="fa text-black text-lg" onClick={() => setShowMenu(showMenu)}/> */}
+          {/* <BiMenu className="fa text-white text-lg" onClick={() => setShowMenu(showMenu)}/> */}
           <ul
             className="  md:flex justify-end hidden"
             // style={{ right: showMenu ? 0 : -200 }}
           >
-            <li className={`${activeLink === '/' ? 'active' : ''} mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-black-300"}`}>
+            <li className={`${activeLink === '/' ? 'active' : ''} mr-6 ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
                
               <Link href="/" className={`flex gap-2 items-center ${activeLink === '/' ? 'active' : ''}`} >
-               <MdHome fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "black"} />
-                <p className={isScrolled ? "text-black" : "text-black"}>HOME</p>
+               <MdHome fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                <p className={isScrolled ? "text-black" : "text-white"}>HOME</p>
               </Link>
             </li>
-            <li className={`mr-6 ${activeLink === '/service' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-black-300"}`}>
+            <li className={`mr-6 ${activeLink === '/service' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
               <Link href="/service" className={`flex gap-2 items-center `}>
-              <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "black"} />
-                <p className={isScrolled ? "text-black" : "text-black"}> SERVICES</p>
+              <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                <p className={isScrolled ? "text-black" : "text-white"}> SERVICES</p>
               </Link>
             </li>  
-            <li className={`mr-6 ${activeLink === '/market' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-black-300"}`}>
+            <li className={`mr-6 ${activeLink === '/market' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
               <Link href="/market" className={`flex gap-2 items-center `} >
-              <GiShop fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "black"} />
-                <p className={isScrolled ? "text-black" : "text-black"}> MARKET</p>
+              <GiShop fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                <p className={isScrolled ? "text-black" : "text-white"}> MARKET</p>
               </Link>
             </li>  
-            <li className={`mr-6 ${activeLink === '/career' ? 'active' : ''} ${ isScrolled ? "after:bg-black-300" : "after:bg-black-300"}`}>
+            <li className={`mr-6 ${activeLink === '/career' ? 'active' : ''} ${ isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
               <Link href="/career" className={`flex gap-2 items-center`}>
-                <FaHelmetSafety fontSize={"18px"} className="mt-[-1px]" color={isScrolled ? "black" : "black"} />
-                <p className={isScrolled ? "text-black" : "text-black"}>CAREER </p>
+                <FaHelmetSafety fontSize={"18px"} className="mt-[-1px]" color={isScrolled ? "black" : "white"} />
+                <p className={isScrolled ? "text-black" : "text-white"}>CAREER </p>
               </Link>
             </li>
-            <li className={`mr-6  ${activeLink === '/about' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-black-300"}`} >
+            <li className={`mr-6  ${activeLink === '/about' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`} >
               <Link href="/about" className={`flex gap-2 items-center ${activeLink === '/about' ? 'active' : ''}`} >
-               <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "black"} />
-                <p className={isScrolled ? "text-black" : "text-black"}>
+               <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                <p className={isScrolled ? "text-black" : "text-white"}>
                   ABOUT
                 </p>
               </Link>
             </li>
-            <li className={`mr-6 ${activeLink === '/contact' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-black-300"}`}>
+            <li className={`mr-6 ${activeLink === '/contact' ? 'active' : ''} ${isScrolled ? "after:bg-black-300" : "after:bg-white"}`}>
               <Link href="/contact" className={`flex gap-2 items-center ${activeLink === '/contact' ? 'active' : ''}`} >
-                    <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "black"} />
-                    <p className={isScrolled ? "text-black" : "text-black"}> CONTACT </p>
+                    <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color={isScrolled ? "black" : "white"} />
+                    <p className={isScrolled ? "text-black" : "text-white"}> CONTACT </p>
               </Link>
             </li>
 
@@ -117,7 +117,7 @@ const Header = () => {
           className={
             isScrolled
               ? "-m-2.5 fa p-2.5 text-black "
-              : "-m-2.5 fa p-2.5 text-black "
+              : "-m-2.5 fa p-2.5 text-white "
           }
           onClick={() => setShowMenu(true)}
         >
@@ -170,7 +170,7 @@ const Header = () => {
                       >
                         <span className="sr-only">Close sidebar</span>
                         <IoMdClose
-                          className="h-6 w-6 text-black"
+                          className="h-6 w-6 text-white"
                           aria-hidden="true"
                         />
                       </button>
@@ -193,40 +193,40 @@ const Header = () => {
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/" className='flex gap-2 items-center' isActive={() => setActiveLink('home')}>
                                    <MdHome fontSize={'18px'} className='mt-[-1px]' color="white" />
-                                   <p className="text-black">HOME</p>
+                                   <p className="text-white">HOME</p>
                               </Link>
                           </li>
 
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/service" className='flex gap-2 items-center' isActive={() => setActiveLink('service')}>
                                    <MdHomeRepairService fontSize={'18px'} className='mt-[-1px]' color="white" />
-                                   <p className="text-black">SERVICES</p>
+                                   <p className="text-white">SERVICES</p>
                               </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/market" className='flex gap-2 items-center' isActive={() => setActiveLink('market')}>
                                    <GiShop fontSize={'18px'} className='mt-[-1px]' color="white" />
-                                   <p className="text-black">MARKET</p>
+                                   <p className="text-white">MARKET</p>
                               </Link>
                           </li>
                           
                           <li  className="mr-6"  onClick={() => setShowMenu(false)} >
                             <Link href="/career" className="flex gap-2 items-center" isActive={() => setActiveLink('career')}  >
                               <FaHelmetSafety fontSize={"18px"} className="mt-[-1px]" color="white"/>
-                              <p className="text-black">CAREER</p>
+                              <p className="text-white">CAREER</p>
                             </Link>
                           </li>
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/about" className='flex gap-2 items-center' isActive={() => setActiveLink('about')}>
                                    <BsFillPeopleFill fontSize={'18px'} className='mt-[-1px]' color="white" />
-                                   <p className="text-black">ABOUT</p>
+                                   <p className="text-white">ABOUT</p>
                               </Link>
                          </li>
 
                           <li className="mr-6" onClick={() => setShowMenu(false)}>
                               <Link href="/contact" className='flex gap-2 items-center' isActive={() => setActiveLink('contact')}>
                                         <MdPermContactCalendar fontSize={'18px'} className='mt-[-1px]' color="white" />
-                                        <p className="text-black">CONTACT</p>
+                                        <p className="text-white">CONTACT</p>
                               </Link>
                           </li>
                         </ul>

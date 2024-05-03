@@ -29,7 +29,7 @@ const Service = () => {
           document.documentElement.scrollTop = 0;
      };
   return (
-     <div className='mt-[100px]'>
+     <div>
      <Banner
        first={
          <h1 className="text-3xl md:text-6xl  font-semibold text-center my-8">

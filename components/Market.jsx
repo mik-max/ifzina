@@ -28,7 +28,7 @@ const Market = () => {
      };
 
   return (
-     <div className='mt-[100px]'>
+     <div>
      <Banner
      first={
           <h1 className="text-3xl md:text-6xl  font-semibold text-center my-8">Markets</h1>
