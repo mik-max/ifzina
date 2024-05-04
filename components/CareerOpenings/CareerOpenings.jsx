@@ -46,7 +46,7 @@ function CareerOpenings() {
             are continuously growing and expanding our team, and new
             opportunities may arise in various departments and locations. In the
             meantime, feel free to submit your resume and cover letter to [
-            <b>careers@ifzina.com</b>](<b>mailto:careers@ifzina.com</b>) for
+            <b>theophilusnwokolo@ifzina.com</b>](<b>mailto:theophilusnwokolo@ifzina.com</b>) for
             consideration for future positions.
           </p>
         </motion.div>
@@ -68,8 +68,8 @@ function CareerOpenings() {
           </h3>
           <p className={styles.p}>
             To apply for a position at IFZINA, please send your resume and cover
-            letter to [<b>careers@ifzina.com</b>](
-            <b>mailto:careers@ifzina.com</b>) with the subject line indicating
+            letter to [<b>theophilusnwokolo@ifzina.com</b>](
+            <b>mailto:theophilusnwokolo@ifzina.com</b>) with the subject line indicating
             the position you are applying for. In your cover letter, please
             include a brief summary of your qualifications, relevant experience,
             and why you are interested in joining the IFZINA team. We will

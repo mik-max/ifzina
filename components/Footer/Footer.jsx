@@ -52,34 +52,33 @@ const Footer = () => {
                     <p className="text-[#56616B]  text-sm leading-7"><span>Email:</span><a href="mailto:info@ifzina.com" target="_blank"> info@ifzina.com</a></p>
                     <div className="flex space-x-3 mt-4 ">
                          <Link
-                               href=""
+                               href="https://www.instagram.com/ifzina1?igsh=aGlobTBsemJ6czI="
                               className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-black-300  z-50 h-12`}
                               target={"_blank"}
                          >
                               <FiInstagram  color="#fff" className="w-6 h-6"  />
                          </Link>
                          <Link
-                               href=""
+                               href="https://x.com/ifzina71080?t=AKp-XSCqd1nZjOixQcoGBA&s=09"
                               className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-black-300  z-50 h-12 `}
                               target={"_blank"}
                          >
                               <FaTwitter  color="#fff" className="w-6 h-6"  />
                          </Link>
                          <Link
-                               href=""
-                              className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-black-300  z-50 h-12`}
-                              target={"_blank"}
-                         >
-                              <FaLinkedinIn  color="#fff" className="w-6 h-6"  />
-                         </Link>
-                         <Link
-                               href=""
+                               href="https://www.facebook.com/share/TaXiVZWSyUSvuAk7/?mibextid=qi2Omg"
                               className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-black-300  z-50 h-12`}
                               target={"_blank"}
                          >
                               <FaFacebookF  color="#fff" className="w-6 h-6"  />
                          </Link>
-                         
+                         {/* <Link
+                               href=""
+                              className={` flex justify-center items-center right-4 bottom-4  w-12 rounded-full bg-black-300  z-50 h-12`}
+                              target={"_blank"}
+                         >
+                              <FaLinkedinIn  color="#fff" className="w-6 h-6"  />
+                         </Link> */}
                     </div>
 
                </div>
