@@ -75,15 +75,15 @@ function TextArea({ label, placeholder, ...props }) {
         console.log(error.text);
       });
   }
-  const [email, setEmail] = useState('')
+  // const [email, setEmail] = useState('')
   
-  useEffect(() => {
-     const storedValue = localStorage.getItem("inputValue");
-      if (storedValue) {
-        setEmail(storedValue);
-      }else{ setEmail('not set yet');}
-      // console.log(email)
-  }, []);
+  // useEffect(() => {
+  //    const storedValue = localStorage.getItem("inputValue");
+  //     if (storedValue) {
+  //       setEmail(storedValue);
+  //     }else{ setEmail('');}
+  //     // console.log(email)
+  // }, []);
    return (
      <div className="lg:order-las borde w-full">
        <form ref={form} onSubmit={handleSubmit}>
@@ -101,7 +101,7 @@ function TextArea({ label, placeholder, ...props }) {
                         type="email"
                         name="from_email"
                         autoComplete="email"
-                        value={email}
+                        // value={email}
                       />
                       <TextInput
                         label="Subject"
