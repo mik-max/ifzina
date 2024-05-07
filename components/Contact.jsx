@@ -19,7 +19,7 @@ function TextInput({ label, ...props }) {
    let id = useId()
  
    return (
-     <div className="group relative z-0 transition-all  focus-within:z-10">
+     <div className="group relative z-0 transition-all mt-4  focus-within:z-10">
        <input
          type="text"
          id={id}
@@ -63,18 +63,33 @@ function TextArea({ label, placeholder, ...props }) {
  function ContactForm() {
    const form = useRef();
    const [open, setOpen] = React.useState(false);
+   const [name, setName] = React.useState('');
+   const [email, setEmail] = React.useState('info@ifzina.com');
+   const [subject, setSubject] = React.useState('');
+   const [message, setMessage] = React.useState('');
 
+   const handleEmail = (event) => {
+    event.preventDefault(); // Prevent the default form submission
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom:%20${encodeURIComponent(name)}`;
+    window.location.href = mailtoLink; // Open the default mail client
+    setName('');
+    setSubject('');
+    setMessage('');
+};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm('service_jvy8jxg', 'template_ej15ayr', form.current, 'HdCcNBZnVuXwkpDeS')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+ const isFormValid = name && email && subject && message; // Check if all fields have values
+
+    
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   emailjs.sendForm('service_jvy8jxg', 'template_ej15ayr', form.current, 'HdCcNBZnVuXwkpDeS')
+  //     .then((result) => {
+  //       setOpen(true);
+  //       form.current.reset();
+  //     }, (error) => {
+  //       console.log(error.text);
+  //     });
+  // }
   // const [email, setEmail] = useState('')
   
   // useEffect(() => {
@@ -86,7 +101,7 @@ function TextArea({ label, placeholder, ...props }) {
   // }, []);
    return (
      <div className="lg:order-las borde w-full">
-       <form ref={form} onSubmit={handleSubmit}>
+       <form ref={form} >
          
          <div className="isolate mt-6 flex  w-full borde flex-col gap-x-8 gap-y-10 lg:flex-row  -space-y-px  bg-white/50">
             <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className="lg:w-[40%] w-full lg:pl-10 pl-0 lg:pr-4 pr-0  ">
@@ -95,25 +110,31 @@ function TextArea({ label, placeholder, ...props }) {
                         Write Us
                       </h2>
                       <div className="mt-10 h-1 w-28 bg-[#C90]"/>
-                      <TextInput label="Name" name="from_name" autoComplete="name" />
-                      <TextInput
-                        label="Email"
-                        type="email"
-                        name="from_email"
-                        autoComplete="email"
-                        // value={email}
-                      />
+                      <TextInput label="Name" name="from_name" value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" />
+                      <div  className=" hidden">
+                        <TextInput
+                          label="Email"
+                          type="email"
+                          onChange={(e) => setEmail(e.target.value)}
+                         
+                          name="from_email"
+                          autoComplete="email"
+                          value={email}
+                        />
+                      </div>
                       <TextInput
                         label="Subject"
                         name="subject"
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
                         autoComplete="organization"
                       />
                 </div>
             </motion.div>
             <motion.div  initial={{ opacity: 0 , x:100}} whileInView={{ opacity: 1, x:0 }}  transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once: true}}   className="lg:w-[60%] w-full">
-              <TextArea label="Message" name="message" placeholder="Write text here..." />
-              <button type='submit' value="send" className=' mt justify-start w-full items-start flex'>
-                  <span className="flex justify-center items-center w-[100%]  bg-black-300 hover:bg-[#1c1c1e] h-[56px] my-[px] tracking-tight text-white cursor-pointer px-8 text-[14px] font-semibold text-lg uppercase">
+              <TextArea label="Message" value={message}  onChange={(e) => setMessage(e.target.value)} name="message" placeholder="Write text here..." />
+              <button disabled={!subject || !name || !message}  onClick={handleEmail}  type='submit' value="send" className=' mt cursor-pointer disabled:cursor-not-allowed justify-start w-full items-start flex'>
+                  <span className="flex justify-center items-center w-[100%]   bg-black-300 hover:bg-[#1c1c1e] h-[56px] my-[px] tracking-tight text-white cursor-poin px-8 text-[14px] font-semibold text-lg uppercase">
                     Send Message
                   </span>
               </button>
