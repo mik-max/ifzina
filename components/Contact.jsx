@@ -62,20 +62,27 @@ function TextArea({ label, placeholder, ...props }) {
  
  function ContactForm() {
    const form = useRef();
-   const [open, setOpen] = React.useState(false);
-   const [name, setName] = React.useState('');
-   const [email, setEmail] = React.useState('info@ifzina.com');
-   const [subject, setSubject] = React.useState('');
-   const [message, setMessage] = React.useState('');
+   const [open, setOpen] = useState(false);
+   const [name, setName] = useState('');
+   const [email, setEmail] = useState('info@ifzina.com');
+   const [subject, setSubject] = useState('');
+   const [message, setMessage] = useState('');
 
    const handleEmail = (event) => {
     event.preventDefault(); // Prevent the default form submission
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom:%20${encodeURIComponent(name)}`;
+    localStorage.removeItem("inputValue");
     window.location.href = mailtoLink; // Open the default mail client
     setName('');
     setSubject('');
     setMessage('');
 };
+
+
+useEffect(() => {
+     const userName = localStorage.getItem('inputValue');
+     if(userName) setName(userName);
+}, [])
 
  const isFormValid = name && email && subject && message; // Check if all fields have values
 

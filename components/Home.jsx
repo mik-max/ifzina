@@ -228,10 +228,10 @@ const Home = () => {
           <form autoComplete="off">
             <div className="flex mt-8 items-center bg-white rounded-[100px] md:h-[72px] h-[56px] md:w-[fit-content] w-[100%] text-black md:text-[18px] text-[16px] pr-[7px]">
               <input
-                type="email"
+                type="text"
                 required
-                className="md:text-[18px] text-[#56616B] text-[16px] pl-[20px] rounded-[100px] bg-white focus:outline-none md:w-[350px]  tracking-tight "
-                placeholder="email address"
+                className="md:text-[18px] text-[#56616B] text-[16px] pl-[20px] rounded-[100px] h-full bg-white focus:outline-none md:w-[350px]  tracking-tight "
+                placeholder="Full Name"
                 value={inputValue}
                 onChange={handleInputChange}
               />
@@ -274,36 +274,26 @@ const Home = () => {
 
           <div className="flex md:flex-row flex-col md:gap-20 gap-5 mt-10">
             <div className="w-[100%] md:w-[50%] flex lg:flex-row flex-col gap-5 rounded-lg bg-[#EFF1F6] md:p-[32px] p-[20px] ">
-              <img
-                src="/images/bg1.jpg"
-                className="w-[60px] h-[60px] rounded-full"
-              />
+              
               <div>
                 <p className="text-[14px] font-[500] text-[#56616B] leading-6">
                   {" "}
-                  IFZINA exceeded our expectations with their professionalism
-                  and attention to detail. Their dedication to delivering on
-                  time and within budget is truly commendable.
+                  IFZINA has been our go-to EPC partner for oil and gas projects for several years now. Their professionalism, attention to detail, and commitment to safety have made them a trusted name in the industry. From exploration to refining, IFZINA's comprehensive services have consistently exceeded our expectations. We look forward to continuing our successful partnership with IFZINA on future projects.
                 </p>
                 <h2 className="font-bold text-[#56616B] text-xl mt-4">
-                  John Doe
+                 John Okoro
                 </h2>
               </div>
             </div>
             <div className="w-[100%] md:w-[50%] flex lg:flex-row flex-col gap-5 rounded-lg bg-[#EFF1F6] md:p-[32px] p-[20px] ">
-              <img
-                src="/images/bg1.jpg"
-                className="w-[60px] h-[60px] rounded-full"
-              />
+            
               <div>
                 <p className="text-[14px] font-[500] text-[#56616B] leading-6">
                   {" "}
-                  IFZINA exceeded our expectations with their professionalism
-                  and attention to detail. Their dedication to delivering on
-                  time and within budget is truly commendable.
+                  As a project manager in the renewable energy sector, I've had the pleasure of working with IFZINA on multiple occasions. Their expertise in engineering, procurement, and construction is unmatched. IFZINA's dedication to sustainability and innovation has been instrumental in the success of our solar energy projects. I highly recommend IFZINA to anyone looking for reliable and cost-effective solutions in the renewable energy industry.
                 </p>
                 <h2 className="font-bold text-[#56616B] text-xl mt-4">
-                  John Doe
+                Sarah Abdullahi
                 </h2>
               </div>
             </div>
