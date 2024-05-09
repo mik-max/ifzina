@@ -76,7 +76,10 @@ const About = () => {
          </motion.div>
          <motion.div initial={{ opacity: 0, y:100 }} whileInView={{opacity: 1, y:0 }}   transition={{ ease: "easeInOut",  duration: 1 }} viewport={{once:true}} className='w-[100%] md:w-[50%] pt-5'>
               <h2 className='font-bold text-[#131316] md:text-4xl text-xl md:mb-[24px] mb-[10px]'>History</h2>
-              <p className='text-[15px] font-[500] text-[#56616B] leading-6'>Established in 20XX, IFZINA has rapidly emerged as a trusted name in the Nigerian EPC industry. With a proven track record of successful projects and a dedicated team of professionals, we continue to set new standards of excellence in our field.</p>
+              <p className='text-[15px] font-[500] text-[#56616B] leading-6 mb-4' >Established in 2013, IFZINA rapidly emerged as a trusted name in the Nigerian EPC industry. With a proven track record of successful projects and a dedicated team of professionals, IFZINA continues to set new standards of excellence in engineering, procurement, and construction services.</p>
+          <p className='text-[15px] font-[500] text-[#56616B] leading-6 mb-4'>Engr. Theophilus Nwokolo, the founder of IFZINA, brings over 13 years of experience in the industry, starting with significant roles in green and brown projects at INDEPENDENT NEWSPAPERS LIMITED. His journey continued with pivotal contributions to Outspan's multi-billion-dollar plant and Mapleleaf Press LTD's operations and maintenance processes.</p>
+          <p className='text-[15px] font-[500] text-[#56616B] leading-6 mb-4'>
+IFZINA's inception in 2002 stemmed from Engr. Theophilus Nwokolo's vision to address various challenges and opportunities in Nigeria's engineering and construction sectors. With a commitment to excellence, innovation, and sustainability, IFZINA aims to continue delivering value to its clients and setting new benchmarks in the industry.</p>
          </motion.div>
      </section>
      <section className='flex flex-col-reverse md:flex-row w-full justify-between lg:gap-24 md:gap-10 gap-5 lg:px-[100px] px-[25px] py-[25px] lg:py-[50px]'  >
@@ -137,17 +140,15 @@ const About = () => {
 
               <div className='flex md:flex-row flex-col md:gap-20 gap-5 mt-10'>
                    <div className='w-[100%] md:w-[50%] flex lg:flex-row flex-col gap-5 rounded-lg bg-[#EFF1F6] md:p-[32px] p-[20px] '>
-                        <img src='/images/bg1.jpg' className='w-[60px] h-[60px] rounded-full'/>
                         <div>
-                             <p className='text-[14px] font-[500] text-[#56616B] leading-6'> IFZINA exceeded our expectations with their professionalism and attention to detail. Their dedication to delivering on time and within budget is truly commendable.</p>
-                             <h4 className='font-bold text-[#56616B] text-xl mt-4'>John Doe</h4>
+                             <p className='text-[14px] font-[500] text-[#56616B] leading-6'>Working with IFZINA on infrastructure development projects has been a game-changer for our community. Their team's expertise and innovative solutions have transformed our roads, bridges, and urban infrastructure, improving connectivity and enhancing our quality of life. IFZINA's commitment to excellence and integrity sets them apart, and we are grateful for their contributions to our city's development.</p>
+                             <h4 className='font-bold text-[#56616B] text-xl mt-4'>Aisha Ibrahim</h4>
                         </div>
                    </div>
                    <div className='w-[100%] md:w-[50%] flex lg:flex-row flex-col gap-5 rounded-lg bg-[#EFF1F6] md:p-[32px] p-[20px] '>
-                        <img src='/images/bg1.jpg' className='w-[60px] h-[60px] rounded-full'/>
                         <div>
-                             <p className='text-[14px] font-[500] text-[#56616B] leading-6'> IFZINA exceeded our expectations with their professionalism and attention to detail. Their dedication to delivering on time and within budget is truly commendable.</p>
-                             <h4 className='font-bold text-[#56616B] text-xl mt-4'>John Doe</h4>
+                             <p className='text-[14px] font-[500] text-[#56616B] leading-6'> IFZINA's role in the power generation and distribution sector cannot be overstated. Their dedication to delivering reliable and sustainable energy solutions has had a significant impact on our community. From building power plants to upgrading transmission infrastructure, IFZINA's expertise has helped us meet our growing energy needs while driving economic growth and development. We are proud to partner with IFZINA and look forward to future collaborations.</p>
+                             <h4 className='font-bold text-[#56616B] text-xl mt-4'>Michael Obi</h4>
                         </div>
                    </div>
               </div>
