@@ -15,8 +15,6 @@ const LauchCmp = () => {
           // Save input value to localStorage
           localStorage.setItem("inputValue", inputValue);
           setInputValue("");
-          // Navigate to another page
-          router.push("/another-page");
         };
      const pathname = usePathname();
      return (
@@ -33,12 +31,12 @@ const LauchCmp = () => {
                <form autoComplete="off">
                  <div className="flex mt-8 items-center bg-white rounded-[100px] md:h-[72px] h-[56px] md:w-[fit-content] w-[100%] text-black md:text-[18px] text-[16px] pr-[7px]">
                    <input
-                     type="email"
+                     type="text"
                      required
-                     className="md:text-[18px] text-[#56616B] text-[16px] pl-[20px] rounded-[100px] bg-white focus:outline-none md:w-[350px]  tracking-tight "
+                     className="md:text-[18px] text-[#56616B] text-[16px] pl-[20px] h-full rounded-[100px] bg-white focus:outline-none md:w-[350px]  tracking-tight "
                      value={inputValue}
                      onChange={handleInputChange}
-                     placeholder="email address"
+                     placeholder="Full Name"
                    />
                    <div className="md:block hidden">
                      <Link
