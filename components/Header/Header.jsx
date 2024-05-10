@@ -58,7 +58,7 @@ const Header = () => {
   return (
     <header
       className={`${isScrolled ? "bg-white shadow-md" : "bg-transparent"} 
-      ${"w-full fixed top-0 left-0 right-0 z-10 transition-all ease-in duration-300"}`}
+      ${"w-full fixed top-0 left-0 right-0 z-10 transition-all ease-in duration-300 max-w-[100vw] "}`}
     >
       <nav className="flex justify-between items-center p-4">
         <Link href="/">
