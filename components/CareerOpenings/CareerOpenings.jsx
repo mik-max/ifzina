@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './CareerOpenings.module.css'
 import {motion} from "framer-motion"
+import Link from 'next/link';
 
 function CareerOpenings() {
   const fadeInAnimation = {
@@ -45,8 +46,8 @@ function CareerOpenings() {
             Check back soon for updates on current job openings at IFZINA. We
             are continuously growing and expanding our team, and new
             opportunities may arise in various departments and locations. In the
-            meantime, feel free to submit your resume and cover letter to [
-            <b>theophilusnwokolo@ifzina.com</b>](<b>mailto:theophilusnwokolo@ifzina.com</b>) for
+            meantime, feel free to submit your resume and cover letter to 
+            <Link href={'mailto:careers@ifzina.com'}><b> careers@ifzina.com </b></Link> for
             consideration for future positions.
           </p>
         </motion.div>
@@ -68,8 +69,7 @@ function CareerOpenings() {
           </h3>
           <p className={styles.p}>
             To apply for a position at IFZINA, please send your resume and cover
-            letter to [<b>theophilusnwokolo@ifzina.com</b>](
-            <b>mailto:theophilusnwokolo@ifzina.com</b>) with the subject line indicating
+            letter to <Link href={'mailto:careers@ifzina.com'}><b> careers@ifzina.com </b></Link>  with the subject line indicating
             the position you are applying for. In your cover letter, please
             include a brief summary of your qualifications, relevant experience,
             and why you are interested in joining the IFZINA team. We will
