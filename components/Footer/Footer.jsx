@@ -16,9 +16,9 @@ const Footer = () => {
           
           <div className="flex md:flex-row flex-col lg:gap-20 md:gap-10">
                <div className="grid lg:grid-cols-2 grid-cols-1 md:gap-20 gap-8 w-[50%]">
-                    <div>
+                    <Link href="/">
                          <Image src={"/images/ifzina_logo.png"} width={200} height={200} alt="logo"/>
-                    </div>
+                    </Link>
                     <div className="lg:mt-5">
                          <h4 className="text-[#131316] text-2xl font-semibold ">Quick Links</h4>
                          <ul className={styles.linkList}>
