@@ -181,8 +181,8 @@ const Header = () => {
                     <div className="flex h-16 shrink-0 items-center  px-6">
                       <Image
                         alt="logo"
-                        className="h-8 w-auto"
-                        src="/images/logo.png"
+                        className="h-12 w-auto rounded-lg"
+                        src="/images/ifzina_logo.jpg"
                         width={200}
                         height={200}
                       />
