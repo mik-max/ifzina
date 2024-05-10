@@ -81,7 +81,7 @@ const Home = () => {
             <>
               <h1 className="font-semibold">Welcome to IFZINA</h1>
               <p>Your Premier EPC Partner in Nigeria.</p>
-              <a href="" class="hero-btn">
+              <a href="/about" class="hero-btn">
                 Visit us to know more
               </a>
             </>
